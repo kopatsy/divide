@@ -36,7 +36,8 @@
                                         width: 2,
                                         color: 'red',
                                         label: {
-                                           text: "{{ poi.name }}"
+                                           text: "{{ poi.name }}",
+                                           rotation: 0,
                                         }
                                     },
                                 {% endfor %}

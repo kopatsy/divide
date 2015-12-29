@@ -26,7 +26,8 @@ GRADES = [
 SERVICES = {
     'Banff': (51.1769288, -115.6034089),
     'Elkford': (50.0245631,-114.9410396),
-    'Sparwood': (49.7259461,-114.9194392)
+    'Sparwood': (49.7259461,-114.9194392),
+    'Rooseville': (49.0007182,-115.0729116),
 }
 
 with open(args.gpx_filename, 'r') as gpx_file:
