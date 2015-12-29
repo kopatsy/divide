@@ -23,6 +23,12 @@ GRADES = [
     (10, sys.maxint, (0, 0, 0))  # Black.
 ]
 
+SERVICES = {
+    'Banff': (51.1769288, -115.6034089),
+    'Elkford': (50.0245631,-114.9410396),
+    'Sparwood': (49.7259461,-114.9194392)
+}
+
 with open(args.gpx_filename, 'r') as gpx_file:
     gpx_parser = gpxpy_parser.GPXParser(gpx_file)
     gpx_parser.parse()
@@ -44,12 +50,20 @@ cur_graph = None
 
 acc_dist = 0
 cur_dist = 0
+poi_distances = {}
 for idx, point in enumerate(points):
     if cur_graph is None:
         cur_graph = dict(
             from_mile=int(acc_dist / 100.0) * 100,
-            data=[]
+            data=[],
+            pois=[],
         )
+        cur_dist = 0
+
+    for poi, coordinates in SERVICES.items():
+        d = distance((point.latitude, point.longitude), coordinates)
+        if poi not in poi_distances or d < poi_distances[poi][0]:
+            poi_distances[poi] = (d, cur_graph, acc_dist)
 
     grade = 0
     if idx < len(points) - 1:
@@ -78,7 +92,12 @@ for idx, point in enumerate(points):
         cur_graph['to_mile'] = int(acc_dist / 100.0) * 100
         graphs.append(cur_graph)
         cur_graph = None
-        cur_dist = 0
+
+for poi, (_, graph, distance) in poi_distances.items():
+    graph['pois'].append(dict(
+        name=poi,
+        distance=distance
+    ))
 
 print render_from_template('.', 'template.js', graphs=graphs)
 

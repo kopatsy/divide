@@ -28,7 +28,19 @@
                         xAxis: {
                             title: {
                                 text: 'Distance (miles)'
-                            }
+                            },
+                            plotLines: [
+                                {% for poi in graph.pois %}
+                                    {
+                                        value: {{ poi.distance }},
+                                        width: 2,
+                                        color: 'red',
+                                        label: {
+                                           text: "{{ poi.name }}"
+                                        }
+                                    },
+                                {% endfor %}
+                            ]
                         },
                         title: {
                             style: {
