@@ -39,10 +39,18 @@ def render_from_template(directory, template_name, **kwargs):
     template = env.get_template(template_name)
     return template.render(**kwargs)
 
-data = []
+graphs = []
+cur_graph = None
 
 acc_dist = 0
+cur_dist = 0
 for idx, point in enumerate(points):
+    if cur_graph is None:
+        cur_graph = dict(
+            from_mile=int(acc_dist / 100.0) * 100,
+            data=[]
+        )
+
     grade = 0
     if idx < len(points) - 1:
         next_point = points[idx + 1]
@@ -50,21 +58,27 @@ for idx, point in enumerate(points):
         elev_diff = next_point.elevation - point.elevation
         grade = (elev_diff / d.meters) * 100
 
+    if idx > 0:
+        last_point = points[idx - 1]
+        d = distance((last_point.latitude, last_point.longitude), (point.latitude, point.longitude))
+        acc_dist += d.miles
+        cur_dist += d.miles
+
     for min_grade, max_grade, color in GRADES:
         if min_grade <= grade and grade <= max_grade:
             break
 
-    data.append(dict(
+    cur_graph['data'].append(dict(
         distance=acc_dist,
         elevation=point.elevation * 3.28084,
         color=color
     ))
 
-    if idx > 0:
-        last_point = points[idx - 1]
-        d = distance((last_point.latitude, last_point.longitude), (point.latitude, point.longitude))
-        acc_dist += d.miles
+    if cur_dist >= 100:
+        cur_graph['to_mile'] = int(acc_dist / 100.0) * 100
+        graphs.append(cur_graph)
+        cur_graph = None
+        cur_dist = 0
 
-    if acc_dist >= 100:
-        print render_from_template('.', 'template.js', data=data)
-        break
+print render_from_template('.', 'template.js', graphs=graphs)
+
