@@ -36,7 +36,7 @@
                                         width: 3,
                                         color: 'black',
                                         label: {
-                                           text: "{{ poi.name }}",
+                                           text: "{{ poi.name }} ({{ poi.to_next }})",
                                            rotation: 0,
                                         }
                                     },
