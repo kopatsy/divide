@@ -95,7 +95,8 @@ next_service = None
 for poi, (_, graph, distance) in sorted(poi_distances.items(), key=lambda e: e[1][2], reverse=True):
     entry = dict(
         name=poi,
-        distance=distance
+        distance=distance,
+        all=False
     )
 
     if next_service is not None:
@@ -103,11 +104,12 @@ for poi, (_, graph, distance) in sorted(poi_distances.items(), key=lambda e: e[1
     else:
         entry['to_next'] = None
 
-    graph['pois'].append(entry)
-
     info = SERVICES[poi]
     if info.get('services') == 'all':
         next_service = distance
+        entry['all'] = True
+
+    graph['pois'].append(entry)
 
 print render_from_template('.', 'template.js', graphs=graphs)
 

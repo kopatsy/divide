@@ -34,10 +34,16 @@
                                     {
                                         value: {{ poi.distance }},
                                         width: 3,
-                                        color: 'black',
+                                        color: {% if poi.all %} 'red' {% else %} 'black' {% endif %},
                                         label: {
-                                           text: "{{ poi.name }} ({{ poi.to_next }})",
-                                           rotation: 0,
+                                            text: "{{ poi.name }} ({{ poi.to_next }})",
+                                            fontSize: "1em",
+                                            rotation: 90,
+                                            {% if poi.all %}
+                                            style: {
+                                                fontWeight: 'bold'
+                                            }
+                                            {% endif %} 
                                         }
                                     },
                                 {% endfor %}
@@ -60,7 +66,7 @@
                                     {
                                         x: {{ item.distance }},
                                         y: {{ item.elevation }},
-                                        segmentColor: 'rgba({{ item.color[0] }}, {{ item.color[1] }}, {{ item.color[2] }}, 0.9)'
+                                        segmentColor: 'rgba({{ item.color[0] }}, {{ item.color[1] }}, {{ item.color[2] }}, 0.5)'
                                     },
                                 {% endfor %}
                             ]
