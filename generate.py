@@ -1,4 +1,5 @@
 import argparse
+import json
 import sys
 
 from jinja2 import FileSystemLoader, Environment
@@ -23,12 +24,8 @@ GRADES = [
     (10, sys.maxint, (0, 0, 0))  # Black.
 ]
 
-SERVICES = {
-    'Banff': (51.1769288, -115.6034089),
-    'Elkford': (50.0245631,-114.9410396),
-    'Sparwood': (49.7259461,-114.9194392),
-    'Rooseville': (49.0007182,-115.0729116),
-}
+with open('./services.json') as f:
+    SERVICES = json.load(f)
 
 with open(args.gpx_filename, 'r') as gpx_file:
     gpx_parser = gpxpy_parser.GPXParser(gpx_file)
@@ -61,8 +58,8 @@ for idx, point in enumerate(points):
         )
         cur_dist = 0
 
-    for poi, coordinates in SERVICES.items():
-        d = distance((point.latitude, point.longitude), coordinates)
+    for poi, info in SERVICES.items():
+        d = distance((point.latitude, point.longitude), info['coordinates'])
         if poi not in poi_distances or d < poi_distances[poi][0]:
             poi_distances[poi] = (d, cur_graph, acc_dist)
 

@@ -1,0 +1,152 @@
+{
+    "Banff, CA": {
+        "coordinates": [51.1769288, -115.6034089]
+    },
+    "Elkford, CA": {
+        "coordinates": [50.0245631, -114.9410396]
+    },
+    "Sparwood, CA": {
+        "coordinates": [49.7259461, -114.9194392]
+    },
+    "Rooseville, MT": {
+        "coordinates": [49.0007182, -115.0729116]
+    },
+    "Eureka, MT": {
+        "coordinates": [48.8749576, -115.066735]
+    },
+    "Whitefish, MT": {
+        "coordinates": [48.4295456, -114.4402685]
+    },
+    "Columbia Falls, MT": {
+        "coordinates": [48.371128, -114.2094355]
+    },
+    "Swan River, MT": {
+        "coordinates": [48.0596743, -114.0897233]
+    },
+    "Ferndale, MT": {
+        "coordinates": [48.0516092, -114.0160544]
+    },
+    "Ovando, MT": {
+        "coordinates": [47.0220631, -113.2079466]
+    },
+    "Lincoln, MT": {
+        "coordinates": [46.9446585, -112.7307511]
+    },
+    "Helena, MT": {
+        "coordinates": [46.5933526, -112.0507991]
+    },
+    "Basin, MT": {
+        "coordinates": [46.2810356, -112.3266276]
+    },
+    "Butte, MT": {
+        "coordinates": [45.905001, -112.9185689]
+    },
+    "Wise River, MT": {
+        "coordinates": [45.6629901,-113.2555394]
+    },
+    "Elkhorn Hot Springs, MT": {
+        "coordinates": [45.45603, -113.110985]
+    },
+    "Lima, MT": {
+        "coordinates": [44.6382646, -112.6000192]
+    },
+    "Sawtelle Mountain Resort, ID": {
+        "coordinates": [44.5245687, -111.3290009]
+    },
+    "Flagg Ranch Resort, ID": {
+        "coordinates": [44.1063183, -110.667603]
+    },
+    "Buffalo Valley Cafe, WY": {
+        "coordinates": [43.8484705,-110.4205117]
+    },
+    "Turpin Meadow Ranch, WY": {
+        "coordinates": [43.85446,-110.27257]
+    },
+    "Togwotee Mountain Lodge, WY": {
+        "coordinates": [43.818988, -110.201983]
+    },
+    "Lava Mountain Lodge, WY": {
+        "coordinates": [43.6685584, -109.9483877]
+    },
+    "Pinedale, WY": {
+        "coordinates": [42.8654991, -109.8794768]
+    },
+    "Boulder, WY": {
+        "coordinates": [42.7501596, -109.7203293]
+    },
+    "Atlantic City, WY": {
+        "coordinates": [42.4876787, -108.7866574]
+    },
+    "Rawlins, WY": {
+        "coordinates": [41.7875211, -107.2575912]
+    },
+    "Silverthorne, CO": {
+        "coordinates": [39.6528607, -106.1163713],
+        "services": ["all"]
+    },
+    "Frisco, CO": {
+        "coordinates": [39.5831212, -106.1236325],
+        "services": ["all"]
+    },
+    "Breckenridge, CO": {
+        "coordinates": [39.5012367, -106.0783162],
+        "services": ["all"]
+    },
+    "Como, CO": {
+        "coordinates": [39.316099, -105.9015682]
+    },
+    "Hartsel, CO": {
+        "coordinates": [39.0216585, -105.8046181]
+    },
+    "Salida, CO": {
+        "coordinates": [38.5328525, -106.0210116]
+    },
+    "Poncha Springs, CO": {
+        "coordinates": [38.5151457, -106.0817012]
+    },
+    "Sargents, CO": {
+        "coordinates": [38.404162, -106.4238042]
+    },
+    "Del Norte, CO": {
+        "coordinates": [37.6782666, -106.3631977]
+    },
+    "Platoro, CO": {
+        "coordinates": [37.3527778, -106.5302496]
+    },
+    "Horca, CO": {
+        "coordinates": [37.1329417, -106.3527426]
+    },
+    "Valecitos, NM": {
+        "coordinates": [36.4950169, -106.1254643]
+    },
+    "El Rito, NM": {
+        "coordinates": [36.3336039, -106.2208267]
+    },
+    "Abiquiu, NM": {
+        "coordinates": [36.2072402, -106.3274159]
+    },
+    "Cuba, NM": {
+        "coordinates": [36.0198817, -106.9622142]
+    },
+    "Grants, NM": {
+        "coordinates": [35.1500634, -107.8823548]
+    },
+    "Pie Town, NM": {
+        "coordinates": [34.2983876, -108.1435598]
+    },
+    "Pinos Altos, NM": {
+        "coordinates": [32.863405, -108.2389458]
+    },
+    "Silver City, NM": {
+        "coordinates": [32.7729811, -108.2965222]
+    },
+    "Separ, NM": {
+        "coordinates": [32.2027582, -108.4320782]
+    },
+    "Hachita, NM": {
+        "coordinates": [31.9181493, -108.3290973]
+    },
+    "Antelope Wells, NM": {
+        "coordinates": [31.3353688, -108.5394198]
+    }
+}

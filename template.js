@@ -33,8 +33,8 @@
                                 {% for poi in graph.pois %}
                                     {
                                         value: {{ poi.distance }},
-                                        width: 2,
-                                        color: 'red',
+                                        width: 3,
+                                        color: 'black',
                                         label: {
                                            text: "{{ poi.name }}",
                                            rotation: 0,
