@@ -80,6 +80,12 @@
     "Rawlins, WY": {
         "coordinates": [41.7875211, -107.2575912]
     },
+    "Clark, CO": {
+        "coordinates": [40.7054108, -106.9280318]
+    },
+    "Steamboat, CO": {
+        "coordinates": [40.4572768, -106.8044478]
+    },
     "Silverthorne, CO": {
         "coordinates": [39.6528607, -106.1163713],
         "services": ["all"]
