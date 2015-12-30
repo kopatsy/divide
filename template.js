@@ -54,6 +54,7 @@
                         },
                         series: [{
                             type: 'coloredarea',
+                            name: 'route',
                             data: [
                                 {% for item in graph.data %}
                                     {

@@ -1,24 +1,91 @@
 {
     "Banff, CA": {
-        "coordinates": [51.1769288, -115.6034089]
+        "coordinates": [51.1769288, -115.6034089],
+        "services": "all"
     },
     "Elkford, CA": {
-        "coordinates": [50.0245631, -114.9410396]
+        "coordinates": [50.0245631, -114.9410396],
+        "services": "all",
+        "places": {
+            "Kootenay Market": {
+                "address": "814 Michel Rd",
+                "phone": "250-865-7514"
+            },
+            "Elkford General Store": {
+                "address": "814 Michel Rd",
+                "phone": "250-865-2788"
+            },
+            "Elkford Mini-Mart & Fas Gas": {
+                "address": "Alpine Way",
+                "phone": "250-865-2415"
+            }
+        }
     },
     "Sparwood, CA": {
-        "coordinates": [49.7259461, -114.9194392]
+        "coordinates": [49.7259461, -114.9194392],
+        "services": "all",
+        "places": {
+            "Express Mart": {
+                "phone": "250-425-2616",
+                "hours": "24/7"
+            },
+            "Overwaitea Foods": {
+                "phone": "250-425-6489",
+                "hours": "8am-9pm"
+            }
+        }
     },
     "Rooseville, MT": {
-        "coordinates": [49.0007182, -115.0729116]
+        "coordinates": [49.0007182, -115.0729116],
+        "services": "limited"
     },
     "Eureka, MT": {
-        "coordinates": [48.8749576, -115.066735]
+        "coordinates": [48.8749576, -115.066735],
+        "services": "all",
+        "places": {
+            "Montana Market": {
+                "address": "400 Dewey Ave",
+                "phone": "406-297-2113",
+                "hours": "7am-9pm"
+            },
+            "Town Pump Food Stores": {
+                "address": "10 Dewey Ave",
+                "phone":  "406-297-2431"
+            },
+            "Heavens Peak Organics": {
+                "address": "355 US-93",              
+                "phone": "406-297-3504",
+                "hours": "8:30am-7pm"
+            }
+        }
     },
     "Whitefish, MT": {
-        "coordinates": [48.4295456, -114.4402685]
+        "coordinates": [48.4295456, -114.4402685],
+        "services": "all",
+        "places": {
+            "Safeway": {
+                "address": "6580 Hwy 93 S.",
+                "hours": "6am-12am"
+            },
+            "Westside Gas & Grocery": {
+                "address": "145 2nd St",
+                "number": "406-862-4535"
+            }
+        }
     },
     "Columbia Falls, MT": {
-        "coordinates": [48.371128, -114.2094355]
+        "coordinates": [48.371128, -114.2094355],
+        "services": "all",
+        "places": {
+            "Town Pump Food Stores": {
+                "address": "502 9th St W",
+                "hours": "24/7"
+            },
+            "Smith's": {
+                "address": "419 Nucleus Ave",
+                "hours": "7am-12am"
+            }
+        }
     },
     "Swan River, MT": {
         "coordinates": [48.0596743, -114.0897233]
@@ -88,15 +155,15 @@
     },
     "Silverthorne, CO": {
         "coordinates": [39.6528607, -106.1163713],
-        "services": ["all"]
+        "services": "all"
     },
     "Frisco, CO": {
         "coordinates": [39.5831212, -106.1236325],
-        "services": ["all"]
+        "services": "all"
     },
     "Breckenridge, CO": {
         "coordinates": [39.5012367, -106.0783162],
-        "services": ["all"]
+        "services": "all"
     },
     "Como, CO": {
         "coordinates": [39.316099, -105.9015682]
