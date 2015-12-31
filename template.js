@@ -5,6 +5,24 @@
     <body>
         {% for graph in graphs %}
             <div id="container{{graph.from_mile}}" style="width:100%; height:400px;"></div>
+                <table style="width:100%">
+                <tr>
+                {% for poi in graph.pois %}
+                    <td>{{ poi.name }}</td>
+                {% endfor %}
+                </tr>
+                <tr>
+                {% for poi in graph.pois %}
+                    <td>
+                    <ul>
+                    {% for place_name in poi.details.places %}
+                        <li>{{ place_name }} - {{ poi.details.places[place_name]['address'] }} - {{ poi.details.places[place_name]['hours'] }} - {{ poi.details.places[place_name]['phone'] }}</li>
+                    {% endfor %}
+                    </ul>
+                    </td>
+                {% endfor %}
+                </tr>
+                </table>
             <script>
                 $(function () {
                     var chart = new Highcharts.Chart({
@@ -34,12 +52,12 @@
                                     {
                                         value: {{ poi.distance }},
                                         width: 3,
-                                        color: {% if poi.all %} 'red' {% else %} 'black' {% endif %},
+                                        color: {% if poi.details.services == 'all' %} 'red' {% else %} 'black' {% endif %},
                                         label: {
                                             text: "{{ poi.name }} ({{ poi.to_next }})",
                                             fontSize: "1em",
                                             rotation: 90,
-                                            {% if poi.all %}
+                                            {% if poi.details.services == 'all' %}
                                             style: {
                                                 fontWeight: 'bold'
                                             }

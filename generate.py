@@ -93,10 +93,11 @@ for idx, point in enumerate(points):
 
 next_service = None
 for poi, (_, graph, distance) in sorted(poi_distances.items(), key=lambda e: e[1][2], reverse=True):
+    details = SERVICES[poi]
     entry = dict(
         name=poi,
         distance=distance,
-        all=False
+        details=details
     )
 
     if next_service is not None:
@@ -104,12 +105,12 @@ for poi, (_, graph, distance) in sorted(poi_distances.items(), key=lambda e: e[1
     else:
         entry['to_next'] = None
 
-    info = SERVICES[poi]
-    if info.get('services') == 'all':
+    if details.get('services') == 'all':
         next_service = distance
         entry['all'] = True
 
-    graph['pois'].append(entry)
+    # Prepend so it is in the distance order.
+    graph['pois'] = [entry] + graph['pois']
 
 print render_from_template('.', 'template.js', graphs=graphs)
 
