@@ -2,26 +2,28 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="./multicolor_series.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <body>
         {% for graph in graphs %}
-            <div id="container{{graph.from_mile}}" style="width:100%; height:400px;"></div>
-                <table style="width:100%">
-                <tr>
-                {% for poi in graph.pois %}
-                    <td>{{ poi.name }}</td>
-                {% endfor %}
-                </tr>
-                <tr>
-                {% for poi in graph.pois %}
-                    <td>
-                    <ul>
-                    {% for place_name in poi.details.places %}
-                        <li>{{ place_name }} - {{ poi.details.places[place_name]['address'] }} - {{ poi.details.places[place_name]['hours'] }} - {{ poi.details.places[place_name]['phone'] }}</li>
+            <div id="container{{graph.from_mile}}" style="width:100%; height:200px;"></div>
+                <table style="width:100%" class="table table-condensed">
+                    <tr>
+                    {% for poi in graph.pois %}
+                        {% if poi.details.places|length > 0 %}
+                        <td>{{ poi.name }}</td>
+                        {% endif %}
                     {% endfor %}
-                    </ul>
-                    </td>
-                {% endfor %}
-                </tr>
+                    </tr>
+                    <tr>
+                    {% for poi in graph.pois %}
+                        {% if poi.details.places|length > 0 %}
+                        <td>
+                            {% for place_name in poi.details.places %}
+                                <p>{{ place_name }} - {{ poi.details.places[place_name]['address'] }} - {{ poi.details.places[place_name]['hours'] }} - {{ poi.details.places[place_name]['phone'] }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                    </tr>
                 </table>
             <script>
                 $(function () {
@@ -55,8 +57,8 @@
                                         color: {% if poi.details.services == 'all' %} 'red' {% else %} 'black' {% endif %},
                                         label: {
                                             text: "{{ poi.name }} ({{ poi.to_next }})",
-                                            fontSize: "1em",
-                                            rotation: 90,
+                                            fontSize: "0.3em",
+                                            rotation: 0,
                                             {% if poi.details.services == 'all' %}
                                             style: {
                                                 fontWeight: 'bold'

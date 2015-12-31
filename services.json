@@ -1,9 +1,9 @@
 {
-    "Banff, CA": {
+    "Banff": {
         "coordinates": [51.1769288, -115.6034089],
         "services": "all"
     },
-    "Elkford, CA": {
+    "Elkford": {
         "coordinates": [50.0245631, -114.9410396],
         "services": "all",
         "places": {
@@ -21,7 +21,7 @@
             }
         }
     },
-    "Sparwood, CA": {
+    "Sparwood": {
         "coordinates": [49.7259461, -114.9194392],
         "services": "all",
         "places": {
@@ -35,11 +35,11 @@
             }
         }
     },
-    "Rooseville, MT": {
+    "Rooseville": {
         "coordinates": [49.0007182, -115.0729116],
         "services": "limited"
     },
-    "Eureka, MT": {
+    "Eureka": {
         "coordinates": [48.8749576, -115.066735],
         "services": "all",
         "places": {
@@ -59,7 +59,7 @@
             }
         }
     },
-    "Whitefish, MT": {
+    "Whitefish": {
         "coordinates": [48.4295456, -114.4402685],
         "services": "all",
         "places": {
@@ -73,7 +73,7 @@
             }
         }
     },
-    "Columbia Falls, MT": {
+    "Columbia Falls": {
         "coordinates": [48.371128, -114.2094355],
         "services": "all",
         "places": {
@@ -87,7 +87,7 @@
             }
         }
     },
-    "Swan River, MT": {
+    "Swan River": {
         "coordinates": [48.0596743, -114.0897233],
         "services": "limited",
         "places": {
@@ -97,7 +97,7 @@
             }
         }
     },
-    "Ferndale, MT": {
+    "Ferndale": {
         "coordinates": [48.0516092, -114.0160544],
         "services": "limited",
         "places": {
@@ -107,7 +107,7 @@
             }
         }
     },
-    "Ovando, MT": {
+    "Ovando": {
         "coordinates": [47.0220631, -113.2079466],
         "services": "limited",
         "places": {
@@ -117,7 +117,7 @@
             }
         }
     },
-    "Lincoln, MT": {
+    "Lincoln": {
         "coordinates": [46.9446585, -112.7307511],
         "services": "all",
         "places": {
@@ -131,11 +131,11 @@
             }
         }
     },
-    "Helena, MT": {
+    "Helena": {
         "coordinates": [46.5933526, -112.0507991],
         "services": "all"
     },
-    "Basin, MT": {
+    "Basin": {
         "coordinates": [46.2810356, -112.3266276],
         "services": "limited",
         "places": {
@@ -146,11 +146,11 @@
             }
         }
     },
-    "Butte, MT": {
+    "Butte": {
         "coordinates": [45.905001, -112.9185689],
         "services": "all"
     },
-    "Wise River, MT": {
+    "Wise River": {
         "coordinates": [45.6629901,-113.2555394],
         "services": "all",
         "places": {
@@ -164,7 +164,7 @@
             }
         }
     },
-    "Elkhorn Hot Springs, MT": {
+    "Elkhorn Hot Springs": {
         "coordinates": [45.45603, -113.110985],
         "services": "limited",
         "places": {
@@ -173,7 +173,7 @@
             }
         }
     },
-    "Lima, MT": {
+    "Lima": {
         "coordinates": [44.6382646, -112.6000192],
         "services": "limited",
         "places": {
@@ -184,7 +184,7 @@
             }
         }
     },
-    "Sawtelle Mountain Resort, ID": {
+    "Sawtelle Mountain Resort": {
         "coordinates": [44.5245687, -111.3290009],
         "services": "limited",
         "places": {
@@ -195,11 +195,11 @@
             }
         }
     },
-    "Flagg Ranch Resort, ID": {
+    "Flagg Ranch Resort": {
         "coordinates": [44.1063183, -110.667603],
         "services": "limited"
     },
-    "Buffalo Valley Cafe, WY": {
+    "Buffalo Valley Cafe": {
         "coordinates": [43.8484705,-110.4205117],
         "services": "limited",
         "places": {
@@ -210,7 +210,7 @@
             }
         }
     },
-    "Turpin Meadow Ranch, WY": {
+    "Turpin Meadow Ranch": {
         "coordinates": [43.85446,-110.27257],
         "services": "limited",
         "places": {
@@ -219,7 +219,7 @@
             }
         }
     },
-    "Togwotee Mountain Lodge, WY": {
+    "Togwotee Mountain Lodge": {
         "coordinates": [43.818988, -110.201983],
         "services": "limited",
         "places": {
@@ -228,7 +228,7 @@
             }
         }
     },
-    "Lava Mountain Lodge, WY": {
+    "Lava Mountain Lodge": {
         "coordinates": [43.6685584, -109.9483877],
         "services": "limited",
         "places": {
@@ -237,11 +237,11 @@
             }
         }
     },
-    "Pinedale, WY": {
+    "Pinedale": {
         "coordinates": [42.8654991, -109.8794768],
         "services": "all"
     },
-    "Boulder, WY": {
+    "Boulder": {
         "coordinates": [42.7501596, -109.7203293],
         "services": "limited",
         "places": {
@@ -252,7 +252,7 @@
             }   
         }
     },
-    "Atlantic City, WY": {
+    "Atlantic City": {
         "coordinates": [42.4876787, -108.7866574],
         "services": "limited",
         "places": {
@@ -263,24 +263,24 @@
             }
         }
     },
-    "Rawlins, WY": {
+    "Rawlins": {
         "coordinates": [41.7875211, -107.2575912],
         "servives": "all"
     },
-    "Clark, CO": {
+    "Clark": {
         "coordinates": [40.7054108, -106.9280318],
         "services": "limited",
         "notes": "Most likely nothing"
     },
-    "Steamboat, CO": {
+    "Steamboat": {
         "coordinates": [40.4572768, -106.8044478],
         "services": "all"
     },
-    "Silverthorne, CO": {
+    "Silverthorne": {
         "coordinates": [39.6528607, -106.1163713],
         "services": "all"
     },
-    "Frisco, CO": {
+    "Frisco": {
         "coordinates": [39.5831212, -106.1236325],
         "services": "all",
         "places": {
@@ -290,11 +290,11 @@
             }
         }
     },
-    "Breckenridge, CO": {
+    "Breckenridge": {
         "coordinates": [39.5012367, -106.0783162],
         "services": "all"
     },
-    "Hartsel, CO": {
+    "Hartsel": {
         "coordinates": [39.0216585, -105.8046181],
         "services": "limited",
         "places": {
@@ -305,15 +305,15 @@
             }
         }
     },
-    "Salida, CO": {
+    "Salida": {
         "coordinates": [38.5328525, -106.0210116],
         "services": "all"
     },
-    "Poncha Springs, CO": {
+    "Poncha Springs": {
         "coordinates": [38.5151457, -106.0817012],
         "services": "all"
     },
-    "Sargents, CO": {
+    "Sargents": {
         "coordinates": [38.404162, -106.4238042],
         "services": "limited",
         "places": {
@@ -323,7 +323,7 @@
             }
         }
     },
-    "Del Norte, CO": {
+    "Del Norte": {
         "coordinates": [37.6782666, -106.3631977],
         "services": "all",
         "places": {
@@ -339,11 +339,11 @@
             }
         }
     },
-    "Platoro, CO": {
+    "Platoro": {
         "coordinates": [37.3527778, -106.5302496],
         "services": "limited"
     },
-    "Horca, CO": {
+    "Horca": {
         "coordinates": [37.1329417, -106.3527426],
         "services": "limited",
         "places": {
@@ -352,7 +352,7 @@
             }
         }
     },
-    "El Rito, NM": {
+    "El Rito": {
         "coordinates": [36.3336039, -106.2208267],
         "services": "limited",
         "places": {
@@ -366,7 +366,7 @@
             }
         }
     },
-    "Abiquiu, NM": {
+    "Abiquiu": {
         "coordinates": [36.2072402, -106.3274159],
         "services": "limited",
         "places": {
@@ -377,7 +377,7 @@
             }
         }
     },
-    "Cuba, NM": {
+    "Cuba": {
         "coordinates": [36.0198817, -106.9622142],
         "services": "all",
         "places": {
@@ -394,11 +394,11 @@
             }
         }
     },
-    "Grants, NM": {
+    "Grants": {
         "coordinates": [35.1500634, -107.8823548],
         "services": "all"
     },
-    "Pie Town, NM": {
+    "Pie Town": {
         "coordinates": [34.2983876, -108.1435598],
         "services": "limited",
         "places": {
@@ -411,7 +411,7 @@
             }
         }
     },
-    "Pinos Altos, NM": {
+    "Pinos Altos": {
         "coordinates": [32.863405, -108.2389458],
         "services": "limited",
         "places": {
@@ -422,11 +422,11 @@
             }
         }
     },
-    "Silver City, NM": {
+    "Silver City": {
         "coordinates": [32.7729811, -108.2965222],
         "services": "all"
     },
-    "Separ, NM": {
+    "Separ": {
         "coordinates": [32.2027582, -108.4320782],
         "services": "limited",
         "places": {
@@ -435,7 +435,7 @@
             }
         }
     },
-    "Hachita, NM": {
+    "Hachita": {
         "coordinates": [31.9181493, -108.3290973],
         "services": "limited",
         "places": {
@@ -446,7 +446,7 @@
             }
         }
     },
-    "Antelope Wells, NM": {
+    "Antelope Wells": {
         "coordinates": [31.3353688, -108.5394198],
         "services": "all"
     }
