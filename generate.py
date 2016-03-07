@@ -92,7 +92,14 @@ for idx, point in enumerate(points):
         cur_graph = None
 
 next_service = None
-for poi, (_, graph, distance) in sorted(poi_distances.items(), key=lambda e: e[1][2], reverse=True):
+for poi, (d, graph, distance) in sorted(poi_distances.items(), key=lambda e: e[1][2], reverse=True):
+    if d > 1:
+        print '%s: %s off route' % (poi, d)
+
+    if d > 6: 
+        print 'IGNORED'
+        continue
+
     details = SERVICES[poi]
     entry = dict(
         name=poi,
@@ -112,5 +119,6 @@ for poi, (_, graph, distance) in sorted(poi_distances.items(), key=lambda e: e[1
     # Prepend so it is in the distance order.
     graph['pois'] = [entry] + graph['pois']
 
-print render_from_template('.', 'template.js', graphs=graphs)
+with open('gen.html', 'w') as output:
+    output.write(render_from_template('.', 'template.js', graphs=graphs))
 

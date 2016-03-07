@@ -56,7 +56,8 @@
                                         width: 3,
                                         color: {% if poi.details.services == 'all' %} 'red' {% else %} 'black' {% endif %},
                                         label: {
-                                            text: "{{ poi.name }} ({{ poi.to_next }})",
+                                            text: "{{ poi.name }}<br>{{ poi.to_next }}",
+                                            useHTML: true,
                                             fontSize: "0.3em",
                                             rotation: 0,
                                             {% if poi.details.services == 'all' %}
