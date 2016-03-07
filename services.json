@@ -60,8 +60,9 @@
         }
     },
     "Whitefish": {
-        "coordinates": [48.4295456, -114.4402685],
+        "coordinates": [48.414969, -114.339187],
         "services": "all",
+        "notes": "Most services seem to be across the rail road.",
         "places": {
             "Safeway": {
                 "address": "6580 Hwy 93 S.",
@@ -108,7 +109,7 @@
         }
     },
     "Ovando": {
-        "coordinates": [47.0220631, -113.2079466],
+        "coordinates": [47.020672,-113.1362027],
         "services": "limited",
         "places": {
             "Ovando Inn": {
@@ -147,11 +148,11 @@
         }
     },
     "Butte": {
-        "coordinates": [45.905001, -112.9185689],
+        "coordinates": [46.0126402, -112.5425501],
         "services": "all"
     },
     "Wise River": {
-        "coordinates": [45.6629901,-113.2555394],
+        "coordinates": [45.7920887,-112.9580925],
         "services": "all",
         "places": {
             "Wise River Club": {
