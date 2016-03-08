@@ -115,6 +115,11 @@
             "Ovando Inn": {
                 "phone": "406-793-5555",
                 "address": "406 Pine St. W"
+            },
+            "The Stray Bullet Café": {
+                "hours": "7am - 3pm",
+                "phone": "406-793-4030",
+                "address": "403 Main St"
             }
         }
     },
