@@ -106,6 +106,7 @@ for poi, (d, graph, distance) in sorted(poi_distances.items(), key=lambda e: e[1
         distance=distance,
         details=details
     )
+    print poi, distance
 
     if next_service is not None:
         entry['to_next'] = int(next_service - distance)

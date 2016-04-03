@@ -32,12 +32,22 @@
             "Overwaitea Foods": {
                 "phone": "250-425-6489",
                 "hours": "8am-9pm"
+            },
+            "Subway": {
+                "hours": "6am-10pm"
             }
         }
     },
     "Rooseville": {
         "coordinates": [49.0007182, -115.0729116],
-        "services": "limited"
+        "services": "limited",
+        "places": {
+            "First and Last chance bar": {
+                "address": "7906 US Highway 93",
+                "phone": "406-889-3443"
+            }
+        }
+
     },
     "Eureka": {
         "coordinates": [48.8749576, -115.066735],
@@ -104,7 +114,7 @@
         "places": {
             "Ferndale Market": {
                 "address": "1845 MT-209, Bigfork",
-                "note": "Keep going straight on Hwy 209. Lodge off route at Holland lake before Richmond Peak."
+                "note": "Keep going straight on Hwy 209."
             }
         }
     },
@@ -313,7 +323,8 @@
     },
     "Salida": {
         "coordinates": [38.5328525, -106.0210116],
-        "services": "all"
+        "services": "all",
+        "notes": "Absolute bikes - 330 W Sackett Ave, Take hotel there."
     },
     "Poncha Springs": {
         "coordinates": [38.5151457, -106.0817012],
