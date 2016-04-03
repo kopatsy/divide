@@ -47,6 +47,7 @@ graphs = []
 cur_graph = None
 
 acc_dist = 0
+acc_elevation = 0
 cur_dist = 0
 poi_distances = {}
 for idx, point in enumerate(points):
@@ -61,9 +62,10 @@ for idx, point in enumerate(points):
     for poi, info in SERVICES.items():
         d = distance((point.latitude, point.longitude), info['coordinates'])
         if poi not in poi_distances or d < poi_distances[poi][0]:
-            poi_distances[poi] = (d, cur_graph, acc_dist)
+            poi_distances[poi] = (d, cur_graph, acc_dist, acc_elevation)
 
     grade = 0
+    elev_diff = 0
     if idx < len(points) - 1:
         next_point = points[idx + 1]
         d = distance((point.latitude, point.longitude), (next_point.latitude, next_point.longitude))
@@ -74,6 +76,7 @@ for idx, point in enumerate(points):
         last_point = points[idx - 1]
         d = distance((last_point.latitude, last_point.longitude), (point.latitude, point.longitude))
         acc_dist += d.miles
+        acc_elevation += (elev_diff if elev_diff > 0 else 0)
         cur_dist += d.miles
 
     for min_grade, max_grade, color in GRADES:
@@ -91,8 +94,14 @@ for idx, point in enumerate(points):
         graphs.append(cur_graph)
         cur_graph = None
 
-next_service = None
-for poi, (d, graph, distance) in sorted(poi_distances.items(), key=lambda e: e[1][2], reverse=True):
+cur_graph['to_mile'] = int(acc_dist)
+graphs.append(cur_graph)
+
+prev_entry = None
+sorted_pois = sorted(poi_distances.items(), key=lambda e: e[1][2])  # Sorted by distance.
+for idx in range(len(sorted_pois)):
+    poi, (d, graph, distance, acc_elevation) = sorted_pois[idx]
+
     if d > 1:
         print '%s: %.1f off route' % (poi, d.miles)
 
@@ -100,27 +109,24 @@ for poi, (d, graph, distance) in sorted(poi_distances.items(), key=lambda e: e[1
         print 'IGNORED'
         continue
 
+    print poi, int(distance)
+
     details = SERVICES[poi]
     entry = dict(
         name=str(poi),
         distance=distance,
-        details=details
+        details=details,
+        acc_elevation=acc_elevation,
+        to_next=None,
+        to_next_elev=None
     )
-    print poi, int(distance)
 
-    if next_service is not None:
-        entry['to_next'] = int(next_service - distance)
-    else:
-        entry['to_next'] = None
+    if prev_entry is not None:
+        prev_entry['to_next'] = int(distance - prev_entry['distance'])
+        prev_entry['to_next_elev'] = int((acc_elevation - prev_entry['acc_elevation']) * 3.28084)
 
-    if details.get('services') == 'all':
-        next_service = distance
-        entry['all'] = True
-
-    # Prepend so it is in the distance order.
-    graph['pois'] = [entry] + graph['pois']
-
+    graph['pois'].append(entry)
+    prev_entry = entry
 
 with open('gen.html', 'w') as output:
     output.write(render_from_template('.', 'template.js', graphs=graphs))
-
