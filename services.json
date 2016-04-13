@@ -3,9 +3,29 @@
         "coordinates": [51.1769288, -115.6034089],
         "services": "all"
     },
+    "Peter Lougheed": {
+        "services": "limited",
+        "notes": "Water only",
+        "coordinates": [50.686054, -115.1135159],
+        "places": {
+            "Visitor Center": {
+                "note": "Potable water"
+            }
+        }
+    },
+    "Boulton Creek": {
+        "services": "limited",
+        "coordinates": [50.6337771, -115.1017748],
+        "places": {
+            "Boulton Creek Trading Post": {
+
+            }
+        }
+    },
     "Elkford": {
         "coordinates": [50.0245631, -114.9410396],
         "services": "all",
+        "note": "Stores on the right before crossing river to the left.",
         "places": {
             "Kootenay Market": {
                 "address": "814 Michel Rd",
@@ -24,6 +44,7 @@
     "Sparwood": {
         "coordinates": [49.7259461, -114.9194392],
         "services": "all",
+        "note": "Arriving via Elk Hwy. Right on Aspen Drive goes to stores.",
         "places": {
             "Express Mart": {
                 "phone": "250-425-2616",
@@ -52,6 +73,7 @@
     "Eureka": {
         "coordinates": [48.8749576, -115.066735],
         "services": "all",
+        "note": "Abundant stream water afterwards.",
         "places": {
             "Montana Market": {
                 "address": "400 Dewey Ave",
@@ -72,7 +94,7 @@
     "Whitefish": {
         "coordinates": [48.414969, -114.339187],
         "services": "all",
-        "notes": "Most services seem to be across the rail road.",
+        "notes": "Most services seem to be across the rail road. Safeway is 1 mile off road. Gas station and restaurants are closer.",
         "places": {
             "Safeway": {
                 "address": "6580 Hwy 93 S.",
@@ -87,6 +109,7 @@
     "Columbia Falls": {
         "coordinates": [48.371128, -114.2094355],
         "services": "all",
+        "notes": "Services on Nucleus st (on route).",
         "places": {
             "Town Pump Food Stores": {
                 "address": "502 9th St W",
@@ -108,9 +131,14 @@
             }
         }
     },
+    "Bigfork": {
+        "coordinates": [48.063804, -114.072370],
+        "offroute": true
+    },
     "Ferndale": {
         "coordinates": [48.0516092, -114.0160544],
         "services": "limited",
+        "notes": "Gas station/ market off route when going straight on Hwy 209",
         "places": {
             "Ferndale Market": {
                 "address": "1845 MT-209, Bigfork",
@@ -118,9 +146,34 @@
             }
         }
     },
+    "Hungry Bear": {
+        "coordinates": [47.477948, -113.675829],
+        "notes": "slightly off route on 83 at Jetty",
+        "services": "limited",
+        "places": {
+            "Restaurant": {
+                "phone": "406-754-2240"
+            }
+        },
+        "offroute": true
+    },
+    "Holland Lake": {
+        "offroute": true,
+        "coordinates": [47.4516503, -113.6040624],
+        "places": {
+            "Lodge": {
+
+            }
+        }
+    },
+    "Seeley Lake": {
+        "offroute": true,
+        "coordinates": [47.1767076, -113.4824932]
+    },
     "Ovando": {
         "coordinates": [47.020672,-113.1362027],
         "services": "limited",
+        "notes": "Ship passport home?",
         "places": {
             "Ovando Inn": {
                 "phone": "406-793-5555",
@@ -164,7 +217,8 @@
     },
     "Butte": {
         "coordinates": [46.0126402, -112.5425501],
-        "services": "all"
+        "services": "all",
+        "notes": "Outdoorsman if bike shop needed."
     },
     "Wise River": {
         "coordinates": [45.7920887,-112.9580925],
@@ -189,6 +243,15 @@
             }
         }
     },
+    "Polaris": {
+        "coordinates": [45.3698506, -113.1202305],
+        "services": "limited",
+        "places": {
+            "High Country Lodge": {
+            }
+        },
+        "notes": "Next is Bannack, can be muddy"
+    },
     "Lima": {
         "coordinates": [44.6382646, -112.6000192],
         "services": "limited",
@@ -211,20 +274,36 @@
             }
         }
     },
+    "Warm River": {
+        "coordinates": [44.1151571, -111.3202324],
+        "places": {
+            "Three rivers ranch": {
+
+            }
+        }
+    },
+    "Squirrel Creek Ranch": {
+        "coordinates": [44.0561784, -111.227518],
+        "services": "limited"
+    },
     "Flagg Ranch Resort": {
         "coordinates": [44.1063183, -110.667603],
         "services": "limited"
     },
-    "Buffalo Valley Cafe": {
+    "Moran": {
         "coordinates": [43.8484705,-110.4205117],
         "services": "limited",
         "places": {
-            "cafe": {
+            "Buffalo Valley Cafe": {
                 "address": "16945 Buffalo Valley Rd, Moran",
                 "phone": "307-543-2062",
                 "hours": "7am-7pm"
             }
         }
+    },
+    "Whiskey Creek Campground": {
+        "coordinates": [43.2563324, -110.0257219],
+        "notes": "water only"
     },
     "Turpin Meadow Ranch": {
         "coordinates": [43.85446,-110.27257],
@@ -236,7 +315,7 @@
         }
     },
     "Togwotee Mountain Lodge": {
-        "coordinates": [43.818988, -110.201983],
+        "coordinates": [43.818988, -110.199789],
         "services": "limited",
         "places": {
             "Restaurant & Bar": {
@@ -268,10 +347,17 @@
             }   
         }
     },
+    "South Pass City": {
+        "coordinates": [42.468710, -108.802780],
+        "notes": "water only"
+    },
     "Atlantic City": {
         "coordinates": [42.4876787, -108.7866574],
         "services": "limited",
         "places": {
+            "Miner's Delight Inn Bed & Breakfast": {
+
+            },
             "Atlantic City Mercantile": {
                 "address":  "100 E Main St",
                 "phone": "307-332-5143",
@@ -279,19 +365,42 @@
             }
         }
     },
-    "Rawlins": {
-        "coordinates": [41.7837292, -107.2450615],
-        "servives": "all"
+    "Diagnus Well": {
+        "coordinates": [42.311380, -108.478130],
+        "notes": "water only"
+    },
+    "Wamsutter": {
+        "coordinates": [41.6697717, -107.9930307],
+        "places": {
+            "24h truck stop": {
+
+            }
+        },
+        "services": "limited"
+    },
+    "Savery": {
+        "coordinates": [41.026879, -107.449508],
+        "places": {
+            "Little Snake River Museum": {}
+        }
+    },
+    "Brush Mountain Lodge": {
+        "coordinates": [40.853690, -107.289560],
+        "services": "limited"
     },
     "Clark": {
         "coordinates": [40.7054108, -106.9280318],
         "services": "limited",
-        "notes": "Most likely nothing"
+        "notes": "Water only?"
     },
     "Steamboat": {
         "coordinates": [40.4572768, -106.8044478],
-        "services": "all"
+        "services": "all",
+        "notes": "Orange peel bike shop"
     },
+    "Radium": {
+        "coordinates": [39.953810, -106.558350]
+    }
     "Silverthorne": {
         "coordinates": [39.6528607, -106.1163713],
         "services": "all"
@@ -390,7 +499,8 @@
             "Bode's General Store": {
                 "address": "21196 US-84",
                 "hours": "10:30am-3pm",
-                "phone": "505-685-4422"
+                "phone": "505-685-4422",
+                "notes": "Apparently they open at 6:30am"
             }
         }
     },
