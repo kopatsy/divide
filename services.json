@@ -391,7 +391,12 @@
     "Clark": {
         "coordinates": [40.7054108, -106.9280318],
         "services": "limited",
-        "notes": "Water only?"
+        "places": {
+            "store": {
+                "phone": "970-879-3849",
+                "address": "54175 RCR 129"
+            }
+        }
     },
     "Steamboat": {
         "coordinates": [40.4572768, -106.8044478],
@@ -399,8 +404,21 @@
         "notes": "Orange peel bike shop"
     },
     "Radium": {
-        "coordinates": [39.953810, -106.558350]
-    }
+        "coordinates": [39.953810, -106.558350],
+        "notes": "What's here? Water only?"
+    },
+    "Kremmling": {
+        "coordinates": [40.0546683, -106.3965728],
+        "offroute": true,
+        "places": {
+            "Kum and Go": {
+                "address": "605 Park Ave",
+                "phone": "970-724-1105",
+                "hours": "24/7"
+            }
+        },
+        "notes": "1.5 miles off route, continue on 9 instead of right on 33."
+    },
     "Silverthorne": {
         "coordinates": [39.6528607, -106.1163713],
         "services": "all"
@@ -416,8 +434,20 @@
         }
     },
     "Breckenridge": {
-        "coordinates": [39.5012367, -106.0783162],
-        "services": "all"
+        "coordinates": [39.480612,-106.046752],
+        "services": "all",
+        "places": {
+            "Market and Liquor": {
+                "hours": "8am-11pm",
+                "phone": "970-453-2398",
+                "address": "311 S Ridge St"
+            },
+            "Conoco gas station": {
+                "notes": "Where boreas pass starts",
+                "address": "715 S Main St",
+                "phone": "303-453-6252"
+            }
+        }
     },
     "Hartsel": {
         "coordinates": [39.0216585, -105.8046181],
@@ -465,6 +495,10 @@
             }
         }
     },
+    "Summitville": {
+        "coordinates": [37.4381827, -106.6064861],
+        "notes": "No idea if there is anything there."
+    },
     "Platoro": {
         "coordinates": [37.3527778, -106.5302496],
         "services": "limited"
@@ -477,6 +511,10 @@
                 "phone": "719-376-5300"
             }
         }
+    },
+    "Vallecitos": {
+        "coordinates": [36.4947399, -106.1158085],
+        "notes": "infamous dogs. Check location of Snack shack somewhere on the road to Vallecitos?"
     },
     "El Rito": {
         "coordinates": [36.3336039, -106.2208267],
@@ -498,7 +536,7 @@
         "places": {
             "Bode's General Store": {
                 "address": "21196 US-84",
-                "hours": "10:30am-3pm",
+                "hours": "6:30am-3pm",
                 "phone": "505-685-4422",
                 "notes": "Apparently they open at 6:30am"
             }
@@ -521,6 +559,10 @@
             }
         }
     },
+    "Milan": {
+        "coordinates": [35.1890501, -107.9013444],
+        "notes": "Water only?"
+    },
     "Grants": {
         "coordinates": [35.1500634, -107.8823548],
         "services": "all"
@@ -537,6 +579,10 @@
                 "phone": "575-772-2711"
             }
         }
+    },
+    "Beaverhead Work Center": {
+        "coordinates": [33.4236213, -108.1136677],
+        "notes": "Water only"
     },
     "Pinos Altos": {
         "coordinates": [32.863405, -108.2389458],
