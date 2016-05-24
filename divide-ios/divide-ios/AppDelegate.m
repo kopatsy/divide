@@ -18,7 +18,6 @@ LocationService *_locationService;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSLog(@"HOLA!");
     _locationService = [[LocationService alloc] init];
     [_locationService startLocationServices];
     return YES;

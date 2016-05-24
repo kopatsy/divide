@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -17,6 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"gen" ofType:@"html" inDirectory:@"www"]];
+    
+    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
+//    NSString *urlString = @"https://www.google.com/";
+//    NSURL *url = [NSURL URLWithString:urlString];
+//    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+//    [_webView loadRequest:urlRequest];
 }
 
 - (void)didReceiveMemoryWarning {

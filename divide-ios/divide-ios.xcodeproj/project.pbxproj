@@ -14,6 +14,7 @@
 		414D087A1CF0F80000D452AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 414D08791CF0F80000D452AA /* Assets.xcassets */; };
 		414D087D1CF0F80000D452AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 414D087B1CF0F80000D452AA /* LaunchScreen.storyboard */; };
 		414D08891CF2BD0200D452AA /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 414D08881CF2BD0200D452AA /* LocationService.m */; };
+		414D088B1CF3D46100D452AA /* www in Resources */ = {isa = PBXBuildFile; fileRef = 414D088A1CF3D46100D452AA /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		414D087E1CF0F80000D452AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		414D08871CF2BD0200D452AA /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationService.h; path = ../LocationService.h; sourceTree = "<group>"; };
 		414D08881CF2BD0200D452AA /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationService.m; path = ../LocationService.m; sourceTree = "<group>"; };
+		414D088A1CF3D46100D452AA /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			children = (
 				414D086C1CF0F80000D452AA /* divide-ios */,
 				414D086B1CF0F80000D452AA /* Products */,
+				414D088A1CF3D46100D452AA /* www */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414D088B1CF3D46100D452AA /* www in Resources */,
 				414D087D1CF0F80000D452AA /* LaunchScreen.storyboard in Resources */,
 				414D087A1CF0F80000D452AA /* Assets.xcassets in Resources */,
 				414D08781CF0F80000D452AA /* Main.storyboard in Resources */,

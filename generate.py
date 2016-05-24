@@ -128,5 +128,5 @@ for idx in range(len(sorted_pois)):
     graph['pois'].append(entry)
     prev_entry = entry
 
-with open('gen.html', 'w') as output:
+with open('www/gen.html', 'w') as output:
     output.write(render_from_template('.', 'template.js', graphs=graphs))

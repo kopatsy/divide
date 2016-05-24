@@ -30,7 +30,6 @@ CLLocationManager *_locationManager;
     }
     
     [_locationManager requestWhenInUseAuthorization];
-//    [_locationManager requestAlwaysAuthorization];
     [_locationManager startUpdatingLocation];
 }
 
