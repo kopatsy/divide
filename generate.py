@@ -3,7 +3,6 @@ import json
 import sys
 
 from jinja2 import FileSystemLoader, Environment
-import googlemaps
 from geopy.distance import distance
 from gpxpy import parser as gpxpy_parser
 
@@ -71,6 +70,8 @@ for poi, poi_info in SERVICES.items():
 
     dist_to_poi[dist_from_start] = (poi, poi_info)
 
+sorted_pois = sorted(SERVICES.items(), key=lambda e: e[1]['location'][1])  # Sorted by distance.
+
 if args.html:
     def render_from_template(directory, template_name, **kwargs):
         loader = FileSystemLoader(directory)
@@ -117,7 +118,6 @@ if args.html:
     cur_graph['to_mile'] = int(point['distance'])
     graphs.append(cur_graph)
 
-    sorted_pois = sorted(SERVICES.items(), key=lambda e: e[1]['location'][1])  # Sorted by distance.
     prev_entry = None
     for poi, poi_info in sorted_pois:
         (_, distance, acc_elevation) = poi_info['location']
@@ -142,5 +142,21 @@ if args.html:
     with open('www/profile.html', 'w') as output:
         output.write(render_from_template('.', 'template.js', graphs=graphs))
 else:
-    pass
+    pois = []
+    for poi, poi_info in sorted_pois:
+        poi_info = dict(poi_info)
+        poi_info['distance'] = poi_info['location'][1]
+        poi_info['acc_elevation'] = int(poi_info['location'][2])
+        del poi_info['location']
+        poi_info['name'] = poi
+        pois.append(poi_info)
+
+    payload = {
+        'points': points,
+        'pois': pois
+    }
+    
+    with open('www/course.json', 'w') as output:
+        json.dump(payload, output)
+
 
