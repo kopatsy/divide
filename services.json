@@ -378,7 +378,11 @@
         }
     },
     "Diagnus Well": {
-        "coordinates": [42.311380, -108.478130],
+        "coordinates": [42.3092814, -108.4949263],
+        "notes": "water only"
+    },
+    "Solar Well": {
+        "coordinates": [41.9249873, -107.9995054],
         "notes": "water only"
     },
     "Wamsutter": {
