@@ -7,24 +7,36 @@
 //
 
 #import "ViewController.h"
+#import "LocationService.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
-
+@property (nonatomic, retain) NSArray *points;
+@property (nonatomic, retain) NSArray *pois;
+@property (nonatomic, retain) LocationService *locationService;
 @end
+
+@interface LocationHandler: NSObject<LocationDelegate>
+@end
+
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"gen" ofType:@"html" inDirectory:@"www"]];
     
-    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
-//    NSString *urlString = @"https://www.google.com/";
-//    NSURL *url = [NSURL URLWithString:urlString];
-//    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-//    [_webView loadRequest:urlRequest];
+    // Initialize location service.
+    _locationService = [[LocationService alloc] init];
+    [_locationService startLocationServices:self];
+}
+
+- (void)handleLocation:(CLLocation *)location {
+    // Refresh web view.
+    NSLog(@"LOCATION UPDATE");
+    //    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"gen" ofType:@"html" inDirectory:@"www"]];
+    
+    //    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 - (void)viewDidLayoutSubviews {

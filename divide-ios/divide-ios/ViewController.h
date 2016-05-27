@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LocationService.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <LocationDelegate>
 
 @end
 

@@ -8,13 +8,13 @@
 
 @import CoreLocation;
 
-@interface LocationService : NSObject <CLLocationManagerDelegate> {
-    CLLocation *currentLocation;
-}
-
-//@property (nonatomic, retain) CLLocationManager *locationManager;
-@property (nonatomic, retain) CLLocation *currentLocation;
-
-- (void)startLocationServices;
-
+@protocol LocationDelegate
+- (void)handleLocation:(CLLocation*)location;
 @end
+
+@interface LocationService : NSObject <CLLocationManagerDelegate>
+@property (nonatomic, retain) id<LocationDelegate> delegate;
+@property (weak) CLLocation *currentLocation;
+- (void)startLocationServices:(id<LocationDelegate>)delegate;
+@end
+

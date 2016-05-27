@@ -9,12 +9,27 @@
 #import "LocationService.h"
 
 @implementation LocationService
-
 @synthesize currentLocation;
 
 CLLocationManager *_locationManager;
 
-- (void)startLocationServices {
+- (void)startLocationServices:(id)aDelegate {
+    _delegate = aDelegate;
+    
+    // Parse JSON data.
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"course" ofType:@"json" inDirectory:@"www"];
+    NSError *error = nil;
+    NSData *JSONData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+    
+    NSDictionary *JSONObject = (NSDictionary*)[NSJSONSerialization
+                                               JSONObjectWithData:JSONData
+                                               options:NSJSONReadingAllowFragments
+                                               error:&error];
+    
+    
+    NSLog(@"%@", JSONObject[@"pois"]);
+    
+    // Setup location manager.
     NSLog(@"%d", [CLLocationManager authorizationStatus]);
     
     _locationManager = [[CLLocationManager alloc] init];
@@ -36,7 +51,11 @@ CLLocationManager *_locationManager;
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     self->currentLocation = [locations lastObject];
     
-    NSLog(@"Latitude %f Longitude: %f", self->currentLocation.coordinate.latitude, self->currentLocation.coordinate.longitude);
+    // Generate the html.
+    
+    [self->_delegate handleLocation:self.currentLocation];
 }
+
+
 
 @end

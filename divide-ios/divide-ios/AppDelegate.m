@@ -14,12 +14,8 @@
 
 @implementation AppDelegate
 
-LocationService *_locationService;
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    _locationService = [[LocationService alloc] init];
-    [_locationService startLocationServices];
     return YES;
 }
 
