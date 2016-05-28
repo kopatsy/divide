@@ -81,13 +81,11 @@ for track in gpx_parser.gpx.tracks:
 
 dist_to_poi = {}
 for poi, poi_info in SERVICES.items():
+    poi_info['offroute'] = False
     (dist_to_route, dist_from_start, _) = poi_info.get('location', (sys.maxint, -1, -1))
     if dist_to_route.miles > 1:
         print '%s: %.1f off route' % (poi, dist_to_route.miles)
-
-    if dist_to_route.miles > 6: 
-        print 'IGNORED'
-        continue
+        poi_info['offroute'] = True
 
     dist_to_poi[dist_from_start] = (poi, poi_info)
 
@@ -155,6 +153,11 @@ else:
         poi_info['acc_elevation'] = int(poi_info['location'][2])
         del poi_info['location']
         poi_info['name'] = poi
+        places = []
+        for name, place in poi_info.get('places', {}).items():
+            place['name'] = name
+            places.append(place)
+        poi_info['places'] = places 
         pois.append(poi_info)
 
     payload = {

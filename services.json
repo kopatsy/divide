@@ -1,11 +1,10 @@
 {
     "Banff": {
-        "coordinates": [51.1769288, -115.6034089],
-        "services": "all"
+        "coordinates": [51.1612533, -115.5622831],
+        "type": "all"
     },
     "Peter Lougheed": {
-        "services": "limited",
-        "notes": "Water only",
+        "type": "water only",
         "coordinates": [50.686054, -115.1135159],
         "places": {
             "Visitor Center": {
@@ -14,7 +13,7 @@
         }
     },
     "Boulton Creek": {
-        "services": "limited",
+        "type": "limited",
         "coordinates": [50.6337771, -115.1017748],
         "places": {
             "Boulton Creek Trading Post": {
@@ -23,8 +22,8 @@
         }
     },
     "Elkford": {
-        "coordinates": [50.0245631, -114.9410396],
-        "services": "all",
+        "coordinates": [50.0217854, -114.9188737],
+        "type": "all",
         "note": "Stores on the right before crossing river to the left.",
         "places": {
             "Kootenay Market": {
@@ -42,8 +41,8 @@
         }
     },
     "Sparwood": {
-        "coordinates": [49.7259461, -114.9194392],
-        "services": "all",
+        "coordinates": [49.7331814, -114.8829587],
+        "type": "all",
         "note": "Arriving via Elk Hwy. Right on Aspen Drive goes to stores.",
         "places": {
             "Express Mart": {
@@ -64,8 +63,8 @@
         }
     },
     "Rooseville": {
-        "coordinates": [49.0007182, -115.0729116],
-        "services": "limited",
+        "coordinates": [48.9998595, -115.0579067],
+        "type": "limited",
         "places": {
             "First and Last chance bar": {
                 "address": "7906 US Highway 93",
@@ -76,7 +75,7 @@
     },
     "Eureka": {
         "coordinates": [48.8749576, -115.066735],
-        "services": "all",
+        "type": "all",
         "note": "Abundant stream water afterwards.",
         "places": {
             "Montana Market": {
@@ -100,8 +99,8 @@
     },
     "Whitefish": {
         "coordinates": [48.414969, -114.339187],
-        "services": "all",
-        "notes": "Most services seem to be across the rail road. Safeway is 1 mile off road. Gas station and restaurants are closer.",
+        "type": "all",
+        "note": "Most services seem to be across the rail road. Safeway is 1 mile off road. Gas station and restaurants are closer.",
         "places": {
             "Safeway": {
                 "address": "6580 Hwy 93 S.",
@@ -114,9 +113,9 @@
         }
     },
     "Columbia Falls": {
-        "coordinates": [48.371128, -114.2094355],
-        "services": "all",
-        "notes": "Services on Nucleus st (on route).",
+        "coordinates": [48.3795585, -114.1861117],
+        "type": "all",
+        "note": "Services on Nucleus st (on route).",
         "places": {
             "Town Pump Food Stores": {
                 "address": "502 9th St W",
@@ -130,8 +129,8 @@
     },
     "Swan River": {
         "coordinates": [48.0596743, -114.0897233],
-        "services": "limited",
-        "notes": "In case of emergency, contact Kathleen at Laughing Horse Lodge 406-886-2080.",
+        "type": "limited",
+        "note": "In case of emergency, contact Kathleen at Laughing Horse Lodge 406-886-2080.",
         "places": {
             "Buzz N Bagels": {
                 "address": "11 Swan Way",
@@ -141,12 +140,13 @@
     },
     "Bigfork": {
         "coordinates": [48.063804, -114.072370],
-        "offroute": true
+        "type": "all",
+        "note": "off route"
     },
     "Ferndale": {
         "coordinates": [48.0516092, -114.0160544],
-        "services": "limited",
-        "notes": "Gas station/ market off route when going straight on Hwy 209",
+        "type": "limited",
+        "note": "Gas station/ market off route when going straight on Hwy 209",
         "places": {
             "Ferndale Market": {
                 "address": "1845 MT-209, Bigfork",
@@ -156,17 +156,16 @@
     },
     "Hungry Bear": {
         "coordinates": [47.477948, -113.675829],
-        "notes": "slightly off route on 83 at Jetty",
-        "services": "limited",
+        "note": "slightly off route on 83 at Jetty",
+        "type": "limited",
         "places": {
             "Restaurant": {
                 "phone": "406-754-2240"
             }
-        },
-        "offroute": true
+        }
     },
     "Holland Lake": {
-        "offroute": true,
+        "type": "limited",
         "coordinates": [47.4516503, -113.6040624],
         "places": {
             "Lodge": {
@@ -175,13 +174,13 @@
         }
     },
     "Seeley Lake": {
-        "offroute": true,
+        "type": "all",
         "coordinates": [47.1767076, -113.4824932]
     },
     "Ovando": {
         "coordinates": [47.020672,-113.1362027],
-        "services": "limited",
-        "notes": "Ship passport home?",
+        "type": "limited",
+        "note": "Ship passport home?",
         "places": {
             "Ovando Inn": {
                 "phone": "406-793-5555",
@@ -195,8 +194,8 @@
         }
     },
     "Lincoln": {
-        "coordinates": [46.9446585, -112.7307511],
-        "services": "all",
+        "coordinates": [46.9542126, -112.6838447],
+        "type": "all",
         "places": {
             "Montana Cafe": {
                 "phone": "406-362-4244"
@@ -213,12 +212,12 @@
         }
     },
     "Helena": {
-        "coordinates": [46.5933526, -112.0507991],
-        "services": "all"
+        "coordinates": [46.5978427, -112.0434561],
+        "type": "all"
     },
     "Basin": {
-        "coordinates": [46.2810356, -112.3266276],
-        "services": "limited",
+        "coordinates": [46.270756, -112.2654287],
+        "type": "limited",
         "places": {
             "Silver Saddle": {
                 "address": "109 Basin St, Boulder",
@@ -229,12 +228,12 @@
     },
     "Butte": {
         "coordinates": [46.0126402, -112.5425501],
-        "services": "all",
-        "notes": "Outdoorsman if bike shop needed."
+        "type": "all",
+        "note": "Outdoorsman if bike shop needed."
     },
     "Wise River": {
         "coordinates": [45.7920887,-112.9580925],
-        "services": "all",
+        "type": "all",
         "places": {
             "Wise River Club": {
                 "address": "65013 Highway 43",
@@ -248,7 +247,7 @@
     },
     "Elkhorn Hot Springs": {
         "coordinates": [45.45603, -113.110985],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Restaurant": {
                 "hours": "8am-8pm, 9pm Fri and Sat"
@@ -257,16 +256,16 @@
     },
     "Polaris": {
         "coordinates": [45.3698506, -113.1202305],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "High Country Lodge": {
             }
         },
-        "notes": "Next is Bannack, can be muddy"
+        "note": "Next is Bannack, can be muddy"
     },
     "Lima": {
         "coordinates": [44.6382646, -112.6000192],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Exxon Store": {
                 "address": "114 S Harrison St",
@@ -277,7 +276,7 @@
     },
     "Sawtelle Mountain Resort": {
         "coordinates": [44.5245687, -111.3290009],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Sawtelle Mountain Resort": {
                 "address": "4133 Quakie Ln, Island Park",
@@ -287,6 +286,7 @@
         }
     },
     "Warm River": {
+        "type": "limited",
         "coordinates": [44.1151571, -111.3202324],
         "places": {
             "Three rivers ranch": {
@@ -294,17 +294,17 @@
             }
         }
     },
-    "Squirrel Creek Ranch": {
+    "Elf Safari West": {
         "coordinates": [44.0561784, -111.227518],
-        "services": "limited"
+        "type": "limited"
     },
     "Flagg Ranch Resort": {
         "coordinates": [44.1063183, -110.667603],
-        "services": "limited"
+        "type": "limited"
     },
     "Moran": {
         "coordinates": [43.8484705,-110.4205117],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Buffalo Valley Cafe": {
                 "address": "16945 Buffalo Valley Rd, Moran",
@@ -315,11 +315,11 @@
     },
     "Whiskey Creek Campground": {
         "coordinates": [43.2563324, -110.0257219],
-        "notes": "water only"
+        "type": "water only"
     },
     "Turpin Meadow Ranch": {
         "coordinates": [43.85446,-110.27257],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Restaurant & Bar": {
                 "number": "844-274-7597"
@@ -328,7 +328,7 @@
     },
     "Togwotee Mountain Lodge": {
         "coordinates": [43.818988, -110.199789],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Restaurant & Bar": {
                 "number": "307-543-2847"
@@ -337,7 +337,7 @@
     },
     "Lava Mountain Lodge": {
         "coordinates": [43.6685584, -109.9483877],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Restaurant & Bar": {
                 "number": "307-455-2506"
@@ -346,11 +346,11 @@
     },
     "Pinedale": {
         "coordinates": [42.8654991, -109.8794768],
-        "services": "all"
+        "type": "all"
     },
     "Boulder": {
         "coordinates": [42.7501596, -109.7203293],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Boulder Store": {
                 "address": "8782 US-191",
@@ -361,11 +361,11 @@
     },
     "South Pass City": {
         "coordinates": [42.468710, -108.802780],
-        "notes": "water only"
+        "type": "water only"
     },
     "Atlantic City": {
         "coordinates": [42.4876787, -108.7866574],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Miner's Delight Inn Bed & Breakfast": {
 
@@ -378,23 +378,24 @@
         }
     },
     "Diagnus Well": {
-        "coordinates": [42.3092814, -108.4949263],
-        "notes": "water only"
+        "coordinates": [42.3092872, -108.4796054],
+        "type": "water only"
     },
     "Solar Well": {
         "coordinates": [41.9249873, -107.9995054],
-        "notes": "water only"
+        "type": "water only"
     },
     "Wamsutter": {
-        "coordinates": [41.6697717, -107.9930307],
+        "coordinates": [41.673917, -107.9822197],
         "places": {
             "24h truck stop": {
 
             }
         },
-        "services": "limited"
+        "type": "limited"
     },
     "Savery": {
+        "type": "limited",
         "coordinates": [41.026879, -107.449508],
         "places": {
             "Little Snake River Museum": {}
@@ -402,11 +403,11 @@
     },
     "Brush Mountain Lodge": {
         "coordinates": [40.853690, -107.289560],
-        "services": "limited"
+        "type": "limited"
     },
     "Clark": {
         "coordinates": [40.7054108, -106.9280318],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "store": {
                 "phone": "970-879-3849",
@@ -415,17 +416,18 @@
         }
     },
     "Steamboat": {
-        "coordinates": [40.4572768, -106.8044478],
-        "services": "all",
-        "notes": "Orange peel bike shop"
+        "coordinates": [40.4851631, -106.8373697],
+        "type": "all",
+        "note": "Orange peel bike shop"
     },
     "Radium": {
         "coordinates": [39.953810, -106.558350],
-        "notes": "No water"
+        "note": "No water",
+        "type": "nothing"
     },
     "Kremmling": {
         "coordinates": [40.0546683, -106.3965728],
-        "offroute": true,
+        "type": "all",
         "places": {
             "Kum and Go": {
                 "address": "605 Park Ave",
@@ -433,15 +435,15 @@
                 "hours": "24/7"
             }
         },
-        "notes": "1.5 miles off route, continue on 9 instead of right on 33."
+        "note": "1.5 miles off route, continue on 9 instead of right on 33."
     },
     "Silverthorne": {
-        "coordinates": [39.6528607, -106.1163713],
-        "services": "all"
+        "coordinates": [39.6303271, -106.0753017],
+        "type": "all"
     },
     "Frisco": {
-        "coordinates": [39.5831212, -106.1236325],
-        "services": "all",
+        "coordinates": [39.5763821, -106.0996427],
+        "type": "all",
         "places": {
             "Safeway": {
                 "address": "1008 Summit Blvd",
@@ -451,7 +453,7 @@
     },
     "Breckenridge": {
         "coordinates": [39.480612,-106.046752],
-        "services": "all",
+        "type": "all",
         "places": {
             "Market and Liquor": {
                 "hours": "8am-11pm",
@@ -459,15 +461,15 @@
                 "address": "311 S Ridge St"
             },
             "Conoco gas station": {
-                "notes": "Where boreas pass starts",
+                "note": "Where boreas pass starts",
                 "address": "715 S Main St",
                 "phone": "303-453-6252"
             }
         }
     },
     "Hartsel": {
-        "coordinates": [39.0216585, -105.8046181],
-        "services": "limited",
+        "coordinates": [39.0213621, -105.7957557],
+        "type": "limited",
         "places": {
             "Highline Cafe & Saloon": {
                 "phone": "719-836-0729",
@@ -478,16 +480,16 @@
     },
     "Salida": {
         "coordinates": [38.5328525, -106.0210116],
-        "services": "all",
-        "notes": "Absolute bikes - 330 W Sackett Ave, Take hotel there."
+        "type": "all",
+        "note": "Absolute bikes - 330 W Sackett Ave, Take hotel there."
     },
     "Poncha Springs": {
         "coordinates": [38.5151457, -106.0817012],
-        "services": "all"
+        "type": "all"
     },
     "Sargents": {
         "coordinates": [38.404162, -106.4238042],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Tomichi Creek Trading Post": {
                 "address": "71420 US-50",
@@ -497,7 +499,7 @@
     },
     "Del Norte": {
         "coordinates": [37.6782666, -106.3631977],
-        "services": "all",
+        "type": "all",
         "places": {
             "Calvillos Mexican Kitchen": {
                 "hours": "8am-8pm closed on Mon",
@@ -513,15 +515,16 @@
     },
     "Summitville": {
         "coordinates": [37.4381827, -106.6064861],
-        "notes": "Ghost town."
+        "note": "Ghost town.",
+        "type": "nothing"
     },
     "Platoro": {
         "coordinates": [37.3527778, -106.5302496],
-        "services": "limited"
+        "type": "limited"
     },
     "Horca": {
         "coordinates": [37.1329417, -106.3527426],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Red Bear Restaurant": {
                 "phone": "719-376-5300"
@@ -530,11 +533,12 @@
     },
     "Vallecitos": {
         "coordinates": [36.4947399, -106.1158085],
-        "notes": "infamous dogs. Check location of Snack shack somewhere on the road to Vallecitos?"
+        "type": "nothing",
+        "note": "infamous dogs. Check location of Snack shack somewhere on the road to Vallecitos?"
     },
     "El Rito": {
-        "coordinates": [36.3336039, -106.2208267],
-        "services": "limited",
+        "coordinates": [36.3461913, -106.1889407],
+        "type": "limited",
         "places": {
             "El Farolito": {
                 "address": "NM-554",
@@ -548,19 +552,19 @@
     },
     "Abiquiu": {
         "coordinates": [36.2072402, -106.3274159],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Bode's General Store": {
                 "address": "21196 US-84",
                 "hours": "6:30am-3pm",
                 "phone": "505-685-4422",
-                "notes": "Apparently they open at 6:30am"
+                "note": "Apparently they open at 6:30am"
             }
         }
     },
     "Cuba": {
         "coordinates": [36.0198817, -106.9622142],
-        "services": "all",
+        "type": "all",
         "places": {
             "McDonalds": {},
             "Subway": {
@@ -574,24 +578,25 @@
                 "phone": "575-289-9429"
             }
         },
-        "notes": "Tarmac all the way to Grants."
+        "note": "Tarmac all the way to Grants."
     },
     "Milan": {
         "coordinates": [35.1890501, -107.9013444],
+        "type": "limited",
         "places": {
             "Love's Travel Stop": {
                 "hours": "24/7",
-                "notes": "After crossing interstate."
+                "note": "After crossing interstate."
             }
         }
     },
     "Grants": {
-        "coordinates": [35.1500634, -107.8823548],
-        "services": "all"
+        "coordinates": [35.1572254, -107.8736427],
+        "type": "all"
     },
     "Pie Town": {
         "coordinates": [34.2983876, -108.1435598],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Good Pie Cafe": {
 
@@ -604,11 +609,11 @@
     },
     "Beaverhead Work Center": {
         "coordinates": [33.4236213, -108.1136677],
-        "notes": "Water only"
+        "type": "water only"
     },
     "Pinos Altos": {
-        "coordinates": [32.863405, -108.2389458],
-        "services": "limited",
+        "coordinates": [32.8641655, -108.2228657],
+        "type": "limited",
         "places": {
             "The Buckhorn": {
                 "address": "32 Main St",
@@ -618,12 +623,12 @@
         }
     },
     "Silver City": {
-        "coordinates": [32.7729811, -108.2965222],
-        "services": "all"
+        "coordinates": [32.7774125, -108.2761297],
+        "type": "all"
     },
     "Separ": {
         "coordinates": [32.2027582, -108.4320782],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Bowlin's Continental Divide Trading Post": {  
                 "hours": "7am-5pm"
@@ -632,7 +637,7 @@
     },
     "Hachita": {
         "coordinates": [31.9181493, -108.3290973],
-        "services": "limited",
+        "type": "limited",
         "places": {
             "Hachita Cafe & Store": {},
             "Hachita Food Mart": {
@@ -642,8 +647,8 @@
         }
     },
     "Antelope Wells": {
-        "coordinates": [31.3353688, -108.5394198],
-        "services": "all",
+        "coordinates": [31.3334486, -108.5323817],
+        "type": "nothing",
         "places": {
             "Border": {
                 "hours": "8am-4pm"
