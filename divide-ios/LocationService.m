@@ -38,12 +38,30 @@
 @implementation RoutePoint
 @end
 
+@protocol RoutePlace
+@end
+
+@interface RoutePlace : JSONModel
+@property (strong, nonatomic) NSString *name;
+@property (nonatomic, strong) NSString<Optional> *note;
+@property (nonatomic, strong) NSString<Optional> *address;
+@property (nonatomic, strong) NSString<Optional> *hours;
+@property (nonatomic, strong) NSString<Optional> *phone;
+@end
+
+@implementation RoutePlace
+@end
+
 @protocol RoutePOI
 @end
 
 @interface RoutePOI : JSONModel
 @property (strong, nonatomic) NSString *name;
 @property (assign, nonatomic) int distance;
+@property (nonatomic, strong) NSString<Optional> *note;
+@property (nonatomic, strong) NSString *type;
+@property (nonatomic, assign) BOOL offroute;
+@property (strong, nonatomic) NSArray<RoutePlace>* places;
 @end
 
 @implementation RoutePOI
@@ -145,7 +163,8 @@ RouteInfo *_route;
             [pois addObject:@{
                               @"name": poi.name,
                               @"distance": [NSNumber numberWithInt:poi.distance],
-                              @"togo": [NSNumber numberWithInt:(poi.distance - current_distance)]
+                              @"togo": [NSNumber numberWithInt:(poi.distance - current_distance)],
+                              @"details": poi
                             }];
         }
     }
