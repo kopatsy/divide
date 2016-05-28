@@ -3,26 +3,10 @@
     <script src="./highcharts.js"></script>
     <script src="./multicolor_series.js"></script>
     <body>
-        <div id="container" style="width:100%; height:200px;"></div>
-<!--            <table style="width:100%" class="table table-condensed">-->
-<!--                <tr>-->
-<!--                    {% for poi in graph.pois %}-->
-<!--                    {% if poi.details.places|length > 0 %}-->
-<!--                    <td>{{ poi.name }}</td>-->
-<!--                    {% endif %}-->
-<!--                    {% endfor %}-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    {% for poi in graph.pois %}-->
-<!--                    {% if poi.details.places|length > 0 %}-->
-<!--                    <td>-->
-<!--                        {% for place_name in poi.details.places %}-->
-<!--                        <p>{{ place_name }} - {{ poi.details.places[place_name]['address'] }} - {{ poi.details.places[place_name]['hours'] }} - {{ poi.details.places[place_name]['phone'] }}</p>-->
-<!--                        {% endfor %}-->
-<!--                        {% endif %}-->
-<!--                        {% endfor %}-->
-<!--                </tr>-->
-<!--            </table>-->
+    <div id="container" style="width:100%; height:200px;"></div>
+    {{#pois}}
+    {{name}} {{togo}} miles<br>
+    {{/pois}}
     <script>
         $(function () {
         var chart = new Highcharts.Chart({
@@ -38,6 +22,9 @@
             legend: {
                 enabled: false
             },
+            title: {
+                text: ''
+            },
             yAxis: {
                 title: {
                     text: 'Elevation (feet)'
@@ -47,20 +34,20 @@
                 title: {
                     text: 'Distance (miles)'
                 },
-/*                plotLines: [
-                {% for poi in pois %}
+                plotLines: [
+                    {{#pois}}
                     {
-                        value: {{ poi.distance }},
-                        width: 3,
+                        value: {{distance}},
+                        width: 2,
                         color: 'black',
-                        label: {
-                            text: {{ poi.name }},
-                            fontSize: "0.3em",
+                        /*label: {
+                            text: '{{name}}',
+                            fontSize: '0.3em',
                             rotation: 0
-                        }
-                    }
-                {% endfor %}
-                ]*/
+                        }*/
+                    },
+                    {{/pois}}
+                ]
             },
             series: [{
                 type: 'coloredarea',

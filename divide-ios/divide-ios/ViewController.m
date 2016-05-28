@@ -34,7 +34,6 @@
 - (void)handleLocation:(CLLocation *)location {
     // Refresh web view.
     
-    NSLog(@"LOCATION UPDATE %@", NSTemporaryDirectory());
     NSString* filePath = [NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), @"gen.html"];
     NSURL *url = [NSURL fileURLWithPath:filePath];
     

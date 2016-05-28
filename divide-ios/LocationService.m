@@ -110,16 +110,20 @@ RouteInfo *_route;
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     self->currentLocation = [locations lastObject];
     
+    int displayed_distance = 200;
+    
     // Find the closest point.
     int closest = -1;
-    double closest_distance = -1;
+    double distance_to_route = -1;
     int idx = 0;
+    int current_distance = 0;
     for (RoutePoint* item in _route.points) {
         CLLocation* location = [[CLLocation alloc] initWithLatitude:item.latitude longitude:item.longitude];
         double distance =[location distanceFromLocation:self.currentLocation];
-        if (closest_distance == -1 || distance < closest_distance) {
+        if (distance_to_route == -1 || distance < distance_to_route) {
             closest = idx;
-            closest_distance = distance;
+            distance_to_route = distance;
+            current_distance = item.distance;
         }
         idx += 1;
     }
@@ -127,18 +131,29 @@ RouteInfo *_route;
     NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:1000];
     idx = closest;
     while (idx < [_route.points count]) {
-        if (((RoutePoint*)[_route.points objectAtIndex:idx]).distance - ((RoutePoint*)[_route.points objectAtIndex:closest]).distance > 200) {
+        if (((RoutePoint*)[_route.points objectAtIndex:idx]).distance - ((RoutePoint*)[_route.points objectAtIndex:closest]).distance > displayed_distance) {
             break;
         }
         [data addObject:[_route.points objectAtIndex:idx]];
         idx += 1;
     }
-
     
+    
+    NSMutableArray *pois = [[NSMutableArray alloc] initWithCapacity:10];
+    for (RoutePOI* poi in _route.pois) {
+        if (poi.distance >= current_distance && poi.distance < current_distance + displayed_distance) {
+            [pois addObject:@{
+                              @"name": poi.name,
+                              @"distance": [NSNumber numberWithInt:poi.distance],
+                              @"togo": [NSNumber numberWithInt:(poi.distance - current_distance)]
+                            }];
+        }
+    }
+
     // Generate the html.
-    NSString *rendering = [_template renderObject:@{@"data": data} error:NULL];
+    NSString *rendering = [_template renderObject:@{@"data": data, @"pois": pois} error:NULL];
     NSString *path = [NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), @"gen.html"];
-    NSLog(@"%@", rendering);
+    NSLog(@"%@", path);
     [rendering writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
 
     [self->_delegate handleLocation:self.currentLocation];
