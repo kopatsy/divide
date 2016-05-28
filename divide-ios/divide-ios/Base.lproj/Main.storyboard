@@ -17,18 +17,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yl5-lr-k0B">
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yl5-lr-k0B">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="800" height="379.5"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="26" width="400" height="774"/>
                                 </variation>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yl5-lr-k0B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3sX-TE-1Da"/>
+                            <constraint firstAttribute="trailing" secondItem="Yl5-lr-k0B" secondAttribute="trailing" id="IyB-8k-tLn"/>
+                            <constraint firstItem="Yl5-lr-k0B" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="KUX-sy-h9J"/>
+                            <constraint firstItem="Yl5-lr-k0B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PZb-DU-EpB"/>
+                            <constraint firstItem="Yl5-lr-k0B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zh2-Ek-dqt"/>
+                            <constraint firstAttribute="trailing" secondItem="Yl5-lr-k0B" secondAttribute="trailing" id="lXf-Ft-ACk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yl5-lr-k0B" secondAttribute="bottom" id="wZa-K3-nl6"/>
+                            <constraint firstItem="Yl5-lr-k0B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wpE-Ef-DCB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3sX-TE-1Da"/>
+                                <exclude reference="IyB-8k-tLn"/>
+                                <exclude reference="KUX-sy-h9J"/>
+                                <exclude reference="wpE-Ef-DCB"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="PZb-DU-EpB"/>
+                                <include reference="Zh2-Ek-dqt"/>
+                                <include reference="lXf-Ft-ACk"/>
+                                <include reference="wZa-K3-nl6"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="3sX-TE-1Da"/>
+                                <include reference="IyB-8k-tLn"/>
+                                <include reference="KUX-sy-h9J"/>
+                                <exclude reference="PZb-DU-EpB"/>
+                                <exclude reference="Zh2-Ek-dqt"/>
+                                <exclude reference="lXf-Ft-ACk"/>
+                                <include reference="wpE-Ef-DCB"/>
+                                <exclude reference="wZa-K3-nl6"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
