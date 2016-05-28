@@ -10,6 +10,8 @@
 #import "GRMustache.h"
 #import "JSONModel.h"
 
+#define METERS_TO_MILES 0.000621371192
+
 @protocol RoutePointColor
 @end
 
@@ -117,12 +119,13 @@ RouteInfo *_route;
     // Generate a directory with JS files.
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *dirPath = NSTemporaryDirectory();
-    for (id name in @[ @"highcharts", @"jquery.min", @"multicolor_series" ]) {
-        NSString *srcPath = [[NSBundle mainBundle] pathForResource:name ofType:@"js" inDirectory:@"www"];
+    for (id fullFileName in @[ @"highcharts.js", @"jquery.min.js", @"multicolor_series.js", @"bootstrap.min.css", @"bootstrap-theme.min.css", @"bootstrap.min.js", @"bootstrap.min.css.map", @"bootstrap-theme.min.css.map"]) {
+        NSString* fileName = [[fullFileName lastPathComponent] stringByDeletingPathExtension];
+        NSString* extension = [fullFileName pathExtension];
+        NSString *srcPath = [[NSBundle mainBundle] pathForResource:fileName ofType:extension inDirectory:@"www"];
         NSString *dstPath = [NSString stringWithFormat:@"%@%@", dirPath, [srcPath lastPathComponent]];
         [fileManager copyItemAtPath:srcPath toPath:dstPath error:nil];
     }
-    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
@@ -164,13 +167,14 @@ RouteInfo *_route;
                               @"name": poi.name,
                               @"distance": [NSNumber numberWithInt:poi.distance],
                               @"togo": [NSNumber numberWithInt:(poi.distance - current_distance)],
-                              @"details": poi
+                              @"details": poi,
+                              @"index": [NSNumber numberWithLong:[pois count]] // To be able to name sections by index in mustache (don't know how to enumerate).
                             }];
         }
     }
 
     // Generate the html.
-    NSString *rendering = [_template renderObject:@{@"data": data, @"pois": pois} error:NULL];
+    NSString *rendering = [_template renderObject:@{@"data": data, @"pois": pois, @"offroute": [NSNumber numberWithInt:distance_to_route * METERS_TO_MILES], @"distance": [NSNumber numberWithInt:current_distance]} error:NULL];
     NSString *path = [NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), @"gen.html"];
     NSLog(@"%@", path);
     [rendering writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];

@@ -2,11 +2,51 @@
     <script src="./jquery.min.js"></script>
     <script src="./highcharts.js"></script>
     <script src="./multicolor_series.js"></script>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="./bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="./bootstrap.min.js"></script>
     <body>
-    <div id="container" style="width:100%; height:200px;"></div>
+    <div id="container" style="width:100%; height:300px;"></div>
+    <table class="table table-condensed">
+        <tr>
+            <td>Distance to route</td>
+            <td>{{offroute}} miles</td>
+        </tr>
+        <tr>
+            <td>Distance</td>
+            <td>{{distance}} miles</td>
+        </tr>
+    </table>
+    <div id="accordion" role="tablist" aria-multiselectable="true">
     {{#pois}}
-    {{name}} {{togo}} miles {{details.note}}<br>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading{{index}}">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{index}}" aria-expanded="true" aria-controls="collapse{{index}}">
+                    {{name}} {{togo}} miles
+                </a>
+            </h4>
+        </div>
+        <div id="collapse{{index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{index}}">
+            Type: {{details.type}}<br>
+            Note: {{details.note}}<br>
+            <table class="table table-condensed">
+                {{#details.places}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{address}}</td>
+                    <td>{{hours}}</td>
+                    <td>{{phone}}</td>
+                    <td>{{note}}</td>
+                </tr>
+                {{/details.places}}
+            </table>
+        </div>
+    </div>
     {{/pois}}
+    </div>
     <script>
         $(function () {
         var chart = new Highcharts.Chart({
