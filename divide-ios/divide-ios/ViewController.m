@@ -33,10 +33,12 @@
 
 - (void)handleLocation:(CLLocation *)location {
     // Refresh web view.
-    NSLog(@"LOCATION UPDATE");
-    //    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"gen" ofType:@"html" inDirectory:@"www"]];
     
-    //    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
+    NSLog(@"LOCATION UPDATE %@", NSTemporaryDirectory());
+    NSString* filePath = [NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), @"gen.html"];
+    NSURL *url = [NSURL fileURLWithPath:filePath];
+    
+    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 - (void)viewDidLayoutSubviews {

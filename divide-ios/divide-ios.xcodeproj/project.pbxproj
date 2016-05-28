@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1290595365096183663B6417 /* libPods-divide-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B270A6FAEC8FB26CD825829B /* libPods-divide-ios.a */; };
 		414D086F1CF0F80000D452AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 414D086E1CF0F80000D452AA /* main.m */; };
 		414D08721CF0F80000D452AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 414D08711CF0F80000D452AA /* AppDelegate.m */; };
 		414D08751CF0F80000D452AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 414D08741CF0F80000D452AA /* ViewController.m */; };
@@ -15,9 +16,11 @@
 		414D087D1CF0F80000D452AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 414D087B1CF0F80000D452AA /* LaunchScreen.storyboard */; };
 		414D08891CF2BD0200D452AA /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 414D08881CF2BD0200D452AA /* LocationService.m */; };
 		414D088B1CF3D46100D452AA /* www in Resources */ = {isa = PBXBuildFile; fileRef = 414D088A1CF3D46100D452AA /* www */; };
+		41A036241CF90E4B00492C19 /* Profile.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 41A036231CF90E4B00492C19 /* Profile.mustache */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00C6034EEE66EC3AC8E7FD90 /* Pods-divide-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-divide-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-divide-ios/Pods-divide-ios.release.xcconfig"; sourceTree = "<group>"; };
 		414D086A1CF0F80000D452AA /* divide-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "divide-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		414D086E1CF0F80000D452AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		414D08701CF0F80000D452AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,6 +34,9 @@
 		414D08871CF2BD0200D452AA /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationService.h; path = ../LocationService.h; sourceTree = "<group>"; };
 		414D08881CF2BD0200D452AA /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationService.m; path = ../LocationService.m; sourceTree = "<group>"; };
 		414D088A1CF3D46100D452AA /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../www; sourceTree = "<group>"; };
+		41A036231CF90E4B00492C19 /* Profile.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Profile.mustache; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.html; };
+		A8FF2294EE749FD3394400CE /* Pods-divide-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-divide-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-divide-ios/Pods-divide-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		B270A6FAEC8FB26CD825829B /* libPods-divide-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-divide-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1290595365096183663B6417 /* libPods-divide-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,7 +56,10 @@
 			children = (
 				414D086C1CF0F80000D452AA /* divide-ios */,
 				414D086B1CF0F80000D452AA /* Products */,
+				41A036231CF90E4B00492C19 /* Profile.mustache */,
 				414D088A1CF3D46100D452AA /* www */,
+				ABBD3BB5A9E08B011C8D5C06 /* Pods */,
+				898FC8E2EB74CE8093F7EA3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +97,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		898FC8E2EB74CE8093F7EA3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B270A6FAEC8FB26CD825829B /* libPods-divide-ios.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABBD3BB5A9E08B011C8D5C06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8FF2294EE749FD3394400CE /* Pods-divide-ios.debug.xcconfig */,
+				00C6034EEE66EC3AC8E7FD90 /* Pods-divide-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,9 +121,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 414D08811CF0F80000D452AA /* Build configuration list for PBXNativeTarget "divide-ios" */;
 			buildPhases = (
+				73C66B2BC0A06BCFE8656AA6 /* 📦 Check Pods Manifest.lock */,
 				414D08661CF0F80000D452AA /* Sources */,
 				414D08671CF0F80000D452AA /* Frameworks */,
 				414D08681CF0F80000D452AA /* Resources */,
+				6BF33F387BDA6C05108C61A1 /* 📦 Embed Pods Frameworks */,
+				C5195C12D63C20770C9762AD /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,10 +178,59 @@
 				414D087D1CF0F80000D452AA /* LaunchScreen.storyboard in Resources */,
 				414D087A1CF0F80000D452AA /* Assets.xcassets in Resources */,
 				414D08781CF0F80000D452AA /* Main.storyboard in Resources */,
+				41A036241CF90E4B00492C19 /* Profile.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BF33F387BDA6C05108C61A1 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-divide-ios/Pods-divide-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73C66B2BC0A06BCFE8656AA6 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5195C12D63C20770C9762AD /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-divide-ios/Pods-divide-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		414D08661CF0F80000D452AA /* Sources */ = {
@@ -271,6 +350,7 @@
 		};
 		414D08821CF0F80000D452AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8FF2294EE749FD3394400CE /* Pods-divide-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "divide-ios/Info.plist";
@@ -282,6 +362,7 @@
 		};
 		414D08831CF0F80000D452AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00C6034EEE66EC3AC8E7FD90 /* Pods-divide-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "divide-ios/Info.plist";
@@ -310,6 +391,7 @@
 				414D08831CF0F80000D452AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

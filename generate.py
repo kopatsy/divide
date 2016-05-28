@@ -19,6 +19,16 @@ with open(args.gpx_filename, 'r') as gpx_file:
     gpx_parser = gpxpy_parser.GPXParser(gpx_file)
     gpx_parser.parse()
 
+
+GRADES = [
+    (-sys.maxint, 2, (0, 255, 0)),  # Green.
+    (2, 4, (255, 255, 0)),  # Yellow.
+    (4, 6, (255, 128, 0)),  # Orange.
+    (6, 8, (255, 0, 0)),  # Red.
+    (8, 10, (153, 51, 255)),  # Purple.
+    (10, sys.maxint, (0, 0, 0))  # Black.
+]
+
 # Read all the data points and populates them with additional information:
 # {
 #   "distance": "Distance from start",
@@ -34,8 +44,10 @@ for track in gpx_parser.gpx.tracks:
     for segment in track.segments:
         for point in segment.points:
             point_info = {
-                'grade': 0,
-                'elevation': point.elevation * 3.28084
+                'latitude': point.latitude,
+                'longitude': point.longitude,
+                'grade': 0.0,
+                'elevation': int(point.elevation * 3.28084)
             }
 
             if last_point is not None:
@@ -44,6 +56,15 @@ for track in gpx_parser.gpx.tracks:
                 elevation_diff = point.elevation - last_point.elevation
                 total_elevation += (elevation_diff if elevation_diff > 0 else 0)
                 point_info['grade'] = (elevation_diff / dist_diff.meters) * 100
+
+            for min_grade, max_grade, color in GRADES:
+                if min_grade <= point_info['grade'] and point_info['grade'] <= max_grade:
+                    break
+            point_info['color'] = {
+                'red': color[0],
+                'green': color[1],
+                'blue': color[2],
+            }
 
             point_info['distance'] = total_distance
             point_info['total_elevation'] = total_elevation
@@ -79,16 +100,6 @@ if args.html:
         template = env.get_template(template_name)
         return template.render(**kwargs)
 
-
-    GRADES = [
-        (-sys.maxint, 2, (0, 255, 0)),  # Green.
-        (2, 4, (255, 255, 0)),  # Yellow.
-        (4, 6, (255, 128, 0)),  # Orange.
-        (6, 8, (255, 0, 0)),  # Red.
-        (8, 10, (153, 51, 255)),  # Purple.
-        (10, sys.maxint, (0, 0, 0))  # Black.
-    ]
-
     cur_graph = None
     graphs = []
     for point in points:
@@ -99,15 +110,10 @@ if args.html:
                 pois=[],
             )
 
-        grade = point['grade']
-        for min_grade, max_grade, color in GRADES:
-            if min_grade <= grade and grade <= max_grade:
-                break
-
         cur_graph['data'].append(dict(
             distance=point['distance'],
             elevation=point['elevation'],
-            color=color
+            color=(point['color']['red'], point['color']['green'], point['color']['blue'])
         ))
 
         if point['distance'] - cur_graph['from_mile'] >= 100:
