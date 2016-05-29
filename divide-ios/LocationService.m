@@ -60,6 +60,7 @@
 @interface RoutePOI : JSONModel
 @property (strong, nonatomic) NSString *name;
 @property (assign, nonatomic) int distance;
+@property (assign, nonatomic) int acc_elevation;
 @property (nonatomic, strong) NSString<Optional> *note;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, assign) BOOL offroute;
@@ -138,6 +139,7 @@ RouteInfo *_route;
     double distance_to_route = -1;
     int idx = 0;
     int current_distance = 0;
+    int current_total_elevation = 0;
     for (RoutePoint* item in _route.points) {
         CLLocation* location = [[CLLocation alloc] initWithLatitude:item.latitude longitude:item.longitude];
         double distance =[location distanceFromLocation:self.currentLocation];
@@ -145,6 +147,7 @@ RouteInfo *_route;
             closest = idx;
             distance_to_route = distance;
             current_distance = item.distance;
+            current_total_elevation = item.total_elevation;
         }
         idx += 1;
     }
@@ -166,7 +169,8 @@ RouteInfo *_route;
             [pois addObject:@{
                               @"name": poi.name,
                               @"distance": [NSNumber numberWithInt:poi.distance],
-                              @"togo": [NSNumber numberWithInt:(poi.distance - current_distance)],
+                              @"distance_togo": [NSNumber numberWithInt:(poi.distance - current_distance)],
+                              @"elevation_togo": [NSNumber numberWithInt:(poi.acc_elevation - current_total_elevation)],
                               @"details": poi,
                               @"index": [NSNumber numberWithLong:[pois count]] // To be able to name sections by index in mustache (don't know how to enumerate).
                             }];
