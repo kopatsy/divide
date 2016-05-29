@@ -128,13 +128,14 @@
         }
     },
     "Swan River": {
-        "coordinates": [48.0596743, -114.0897233],
+        "coordinates": [48.0955326, -114.0312517],
         "type": "limited",
         "note": "In case of emergency, contact Kathleen at Laughing Horse Lodge 406-886-2080.",
         "places": {
-            "Buzz N Bagels": {
-                "address": "11 Swan Way",
-                "phone": "406-837-2899"
+            "Echo Lake Cafe": {
+                "address": "1195 MT-83, Bigfork, MT 59911",
+                "hours": "6:30am-2:30pm",
+                "phone": "406-837-4252"
             }
         }
     },
@@ -282,6 +283,11 @@
                 "address": "4133 Quakie Ln, Island Park",
                 "phone": "208-558-9366",
                 "note": "Confirm food"
+            },
+            "Subway": {
+                "address": "4141 Sawtelle Peak Rd",
+                "phone": "208-558-9884",
+                "hours": "10:30am-7pm Close Sunday"
             }
         }
     },
@@ -290,13 +296,19 @@
         "coordinates": [44.1151571, -111.3202324],
         "places": {
             "Three rivers ranch": {
-
+                "hours": "7:30am-9pm"
             }
         }
     },
-    "Elf Safari West": {
-        "coordinates": [44.0561784, -111.227518],
-        "type": "limited"
+    "Squirrel Creek Elk Ranch": {
+        "coordinates": [44.0561618, -111.2299307],
+        "type": "limited",
+        "places": {
+            "Restaurant": {
+                "phone": "208-652-3972"
+            }
+        }
+
     },
     "Flagg Ranch Resort": {
         "coordinates": [44.1063183, -110.667603],
@@ -464,6 +476,14 @@
                 "note": "Where boreas pass starts",
                 "address": "715 S Main St",
                 "phone": "303-453-6252"
+            }
+        }
+    },
+    "Como": {
+        "coordinates": [39.3152061, -105.8945517],
+        "type": "limited",
+        "places": {
+            "Como Eating House": {
             }
         }
     },
