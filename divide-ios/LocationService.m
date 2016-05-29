@@ -63,7 +63,7 @@
 @property (assign, nonatomic) int acc_elevation;
 @property (nonatomic, strong) NSString<Optional> *note;
 @property (nonatomic, strong) NSString *type;
-@property (nonatomic, assign) BOOL offroute;
+@property (nonatomic, assign) float offroute_distance;
 @property (strong, nonatomic) NSArray<RoutePlace>* places;
 @end
 
@@ -166,12 +166,18 @@ RouteInfo *_route;
     NSMutableArray *pois = [[NSMutableArray alloc] initWithCapacity:10];
     for (RoutePOI* poi in _route.pois) {
         if (poi.distance >= current_distance && poi.distance < current_distance + displayed_distance) {
+            NSString *offroute = @"";
+            if (poi.offroute_distance) {
+                offroute = [NSString stringWithFormat:@"%.1f", poi.offroute_distance];
+            }
+            
             [pois addObject:@{
                               @"name": poi.name,
                               @"distance": [NSNumber numberWithInt:poi.distance],
                               @"distance_togo": [NSNumber numberWithInt:(poi.distance - current_distance)],
                               @"elevation_togo": [NSNumber numberWithInt:(poi.acc_elevation - current_total_elevation)],
                               @"details": poi,
+                              @"offroute": offroute,
                               @"index": [NSNumber numberWithLong:[pois count]] // To be able to name sections by index in mustache (don't know how to enumerate).
                             }];
         }

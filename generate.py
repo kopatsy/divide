@@ -9,6 +9,7 @@ from gpxpy import parser as gpxpy_parser
 parser = argparse.ArgumentParser()
 parser.add_argument('gpx_filename', help='Path of the input GPX file.')
 parser.add_argument('--html', help='Generage the HTML page.', action='store_true', default=False)
+parser.add_argument('--cues', help='Generage distance cues.', action='store_true', default=False)
 
 args = parser.parse_args()
 
@@ -79,15 +80,12 @@ for track in gpx_parser.gpx.tracks:
 
             points.append(point_info)
 
-dist_to_poi = {}
 for poi, poi_info in SERVICES.items():
     poi_info['offroute'] = False
     (dist_to_route, dist_from_start, _) = poi_info.get('location', (sys.maxint, -1, -1))
     if dist_to_route.miles > 1:
         print '%s: %.1f off route' % (poi, dist_to_route.miles)
         poi_info['offroute'] = True
-
-    dist_to_poi[dist_from_start] = (poi, poi_info)
 
 sorted_pois = sorted(SERVICES.items(), key=lambda e: e[1]['location'][1])  # Sorted by distance.
 
@@ -145,12 +143,29 @@ if args.html:
 
     with open('www/profile.html', 'w') as output:
         output.write(render_from_template('.', 'template.js', graphs=graphs))
+elif args.cues:
+    last_distance = None
+    for poi, poi_info in sorted_pois:
+        if poi_info['offroute']:
+            continue
+        distance = poi_info['location'][1]
+        if last_distance is not None:
+            print int(distance - last_distance)
+        else:
+            print
+        last_distance = distance
+        print int(distance), poi,
+    print
 else:
     pois = []
     for poi, poi_info in sorted_pois:
         poi_info = dict(poi_info)
         poi_info['distance'] = poi_info['location'][1]
         poi_info['acc_elevation'] = int(poi_info['location'][2])
+        if poi_info['offroute']:
+            poi_info['offroute_distance'] = poi_info['location'][0].miles
+        else:
+            poi_info['offroute_distance'] = 0
         del poi_info['location']
         poi_info['name'] = poi
         places = []
