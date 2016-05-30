@@ -78,6 +78,16 @@
                     text: 'Distance (miles)'
                 },
                 plotLines: [
+                    {
+                        value: {{distance}},
+                        width: 2,
+                        color: 'red',
+                        label: {
+                            text: 'Arthur',
+                            fontSize: '0.2em',
+                            rotation: 90
+                        }
+                    },
                     {{#pois}}
                     {
                         value: {{distance}},

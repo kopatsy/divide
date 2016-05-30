@@ -11,6 +11,7 @@
 #import "JSONModel.h"
 
 #define METERS_TO_MILES 0.000621371192
+#define DISPLAYED_DISTANCE 200
 
 @protocol RoutePointColor
 @end
@@ -132,8 +133,6 @@ RouteInfo *_route;
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     self->currentLocation = [locations lastObject];
     
-    int displayed_distance = 200;
-    
     // Find the closest point.
     int closest = -1;
     double distance_to_route = -1;
@@ -152,20 +151,29 @@ RouteInfo *_route;
         idx += 1;
     }
     
-    NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:1000];
+    // Copy 10 miles before and DISPLAYED_DISTANCE after.
     idx = closest;
+    
+    while (idx >= 0) {
+        RoutePoint* point = [_route.points objectAtIndex:idx];
+        if (idx == 0 || point.distance <= current_distance - 10) {
+            break;
+        }
+        idx -= 1;
+    }
+    
+    NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:1000];
     while (idx < [_route.points count]) {
-        if (((RoutePoint*)[_route.points objectAtIndex:idx]).distance - ((RoutePoint*)[_route.points objectAtIndex:closest]).distance > displayed_distance) {
+        if (((RoutePoint*)[_route.points objectAtIndex:idx]).distance - ((RoutePoint*)[_route.points objectAtIndex:closest]).distance > DISPLAYED_DISTANCE) {
             break;
         }
         [data addObject:[_route.points objectAtIndex:idx]];
         idx += 1;
     }
     
-    
     NSMutableArray *pois = [[NSMutableArray alloc] initWithCapacity:10];
     for (RoutePOI* poi in _route.pois) {
-        if (poi.distance >= current_distance && poi.distance < current_distance + displayed_distance) {
+        if (poi.distance >= current_distance && poi.distance < current_distance + DISPLAYED_DISTANCE) {
             NSString *offroute = @"";
             if (poi.offroute_distance) {
                 offroute = [NSString stringWithFormat:@"%.1f", poi.offroute_distance];
