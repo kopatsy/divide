@@ -109,6 +109,10 @@
             "Westside Gas & Grocery": {
                 "address": "145 2nd St",
                 "phone": "406-862-4535"
+            },
+            "MT Glacier Cyclery": {
+                "hours": "406-862-6446",
+                "phone": "M-F 9-6, Sat-9-5"
             }
         }
     },
@@ -214,7 +218,13 @@
     },
     "Helena": {
         "coordinates": [46.5978427, -112.0434561],
-        "type": "all"
+        "type": "all",
+        "places": {
+            "The Garage bike shop": {
+                "hours": "M-Th 10-6, Fr-Sat 10-5",
+                "phone": "406-422-5388"
+            }
+        }
     },
     "Basin": {
         "coordinates": [46.270756, -112.2654287],
@@ -230,7 +240,12 @@
     "Butte": {
         "coordinates": [46.0126402, -112.5425501],
         "type": "all",
-        "note": "Outdoorsman if bike shop needed."
+        "places": {
+            "Outdoorsman bike shop": {
+                "phone": "406-494-7700",
+                "hours": "W-F 10-6, Sat 10-5"
+            }
+        }
     },
     "Wise River": {
         "coordinates": [45.7920887,-112.9580925],
@@ -430,7 +445,12 @@
     "Steamboat": {
         "coordinates": [40.4851631, -106.8373697],
         "type": "all",
-        "note": "Orange peel bike shop"
+        "places": {
+            "Orange Peel bike shop": {
+                "hours": "Mon-Fri: 10-6, Sat: 10-5",
+                "phone": "970-879-2957"
+            }
+        }
     },
     "Radium": {
         "coordinates": [39.953810, -106.558350],
@@ -501,7 +521,13 @@
     "Salida": {
         "coordinates": [38.5328525, -106.0210116],
         "type": "all",
-        "note": "Absolute bikes - 330 W Sackett Ave, Take hotel there."
+        "places": {
+            "Absolute bikes": {
+                "address": "330 W Sackett Ave",
+                "hours": "9-6 7 days a week",
+                "phone": "719-539-9295"
+            }
+        }
     },
     "Poncha Springs": {
         "coordinates": [38.5151457, -106.0817012],
@@ -644,7 +670,13 @@
     },
     "Silver City": {
         "coordinates": [32.7774125, -108.2761297],
-        "type": "all"
+        "type": "all",
+        "places": {
+            "The Gila Hike and Bike": {
+                "hours": "M-F 9-5:30, Sat 9-5, Sun 9-4",
+                "phone": "575-388-3222"
+            }
+        }
     },
     "Separ": {
         "coordinates": [32.2027582, -108.4320782],
