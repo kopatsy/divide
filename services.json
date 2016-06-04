@@ -154,7 +154,7 @@
         "note": "Gas station/ market off route when going straight on Hwy 209",
         "places": {
             "Ferndale Market": {
-                "address": "1845 MT-209, Bigfork",
+                "address": "1845 MT-209",
                 "note": "Keep going straight on Hwy 209."
             }
         }
@@ -612,7 +612,10 @@
         "coordinates": [36.0198817, -106.9622142],
         "type": "all",
         "places": {
-            "McDonalds": {},
+            "McDonalds": {
+                "phone": "575-289-2345",
+                "address": "6401 US-550"
+            },
             "Subway": {
                 "hours": "7am-9pm"
             },
@@ -624,7 +627,7 @@
                 "phone": "575-289-9429"
             }
         },
-        "note": "Tarmac all the way to Grants."
+        "note": "Tarmac all the way to Grants. Cross Indian reservation."
     },
     "Milan": {
         "coordinates": [35.1890501, -107.9013444],
