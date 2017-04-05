@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:first100.gpx">
+      location = "group:helena.gpx">
    </FileRef>
    <FileRef
       location = "group:divide-ios.xcodeproj">

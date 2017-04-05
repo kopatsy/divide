@@ -64,7 +64,7 @@
                                             style: {
                                                 fontWeight: 'bold'
                                             }
-                                            {% endif %} 
+                                            {% endif %}
                                         }
                                     },
                                 {% endfor %}

@@ -15,16 +15,16 @@
     "Boulton Creek": {
         "type": "limited",
         "coordinates": [50.6337771, -115.1017748],
+        "note": "Fill up with water. Powerline climb with some hab there. Long stretch of dirt road.",
         "places": {
             "Boulton Creek Trading Post": {
-
             }
         }
     },
     "Elkford": {
         "coordinates": [50.0217854, -114.9188737],
         "type": "all",
-        "note": "Stores on the right before crossing river to the left.",
+        "note": "Stores on the right before crossing river to the left. Minigas is right on route. Fill up on everything. Lot of road to Sparwood.",
         "places": {
             "Kootenay Market": {
                 "address": "814 Michel Rd",
@@ -34,7 +34,7 @@
                 "address": "814 Michel Rd",
                 "phone": "250-865-2788"
             },
-            "Elkford Mini-Mart & Fas Gas": {
+            "Elkford Mini-Mart & Gas": {
                 "address": "Alpine Way",
                 "phone": "250-865-2415"
             }
@@ -43,7 +43,7 @@
     "Sparwood": {
         "coordinates": [49.7331814, -114.8829587],
         "type": "all",
-        "note": "Arriving via Elk Hwy. Right on Aspen Drive goes to stores.",
+        "note": "Arriving via Elk Hwy. Right on Aspen Drive goes to stores. Last service until border. Rivers everywhere. Pave road to Corban with no life. Get ready for the scary part. Watch for deep crossing.",
         "places": {
             "Express Mart": {
                 "phone": "250-425-2616",
@@ -62,13 +62,20 @@
             }
         }
     },
+    "Butts Cabin": {
+        "coordinates": [49.1194225, -114.508798],
+        "service": "nothing",
+        "note": "It is not the first cabin. Cabin is on the right hand side.",
+        "type": "nothing"
+    },
     "Rooseville": {
         "coordinates": [48.9998595, -115.0579067],
         "type": "limited",
         "places": {
             "First and Last chance bar": {
                 "address": "7906 US Highway 93",
-                "phone": "406-889-3443"
+                "phone": "406-889-3443",
+                "note": "Not a good idea unless very hungry. Gas station down the road instead."
             }
         }
 
@@ -76,7 +83,7 @@
     "Eureka": {
         "coordinates": [48.8749576, -115.066735],
         "type": "all",
-        "note": "Abundant stream water afterwards.",
+        "note": "Abundant stream water afterwards. Go over flathhead pass. Watch out for sharp rocks down to dirt road. No services until Whitefish. May be snow on red meadow pass.",
         "places": {
             "Montana Market": {
                 "address": "400 Dewey Ave",
@@ -100,7 +107,7 @@
     "Whitefish": {
         "coordinates": [48.414969, -114.339187],
         "type": "all",
-        "note": "Most services seem to be across the rail road. Safeway is 1 mile off road. Gas station and restaurants are closer.",
+        "note": "Most services seem to be across the rail road. Safeway is 1 mile off road. Gas station and restaurants are closer. Readlly flat for a while.",
         "places": {
             "Safeway": {
                 "address": "6580 Hwy 93 S.",
@@ -145,13 +152,12 @@
     },
     "Bigfork": {
         "coordinates": [48.063804, -114.072370],
-        "type": "all",
-        "note": "off route"
+        "type": "all"
     },
     "Ferndale": {
         "coordinates": [48.0516092, -114.0160544],
         "type": "limited",
-        "note": "Gas station/ market off route when going straight on Hwy 209",
+        "note": "Gas station/ market off route when going straight on Hwy 209. Gets pretty remote quickly to holland lake. Make noise in single track.",
         "places": {
             "Ferndale Market": {
                 "address": "1845 MT-209",
@@ -161,7 +167,7 @@
     },
     "Hungry Bear": {
         "coordinates": [47.477948, -113.675829],
-        "note": "slightly off route on 83 at Jetty",
+        "note": "slightly off route on 83 at Jetty. Don't go unless desperate.",
         "type": "limited",
         "places": {
             "Restaurant": {
@@ -172,20 +178,21 @@
     "Holland Lake": {
         "type": "limited",
         "coordinates": [47.4516503, -113.6040624],
+        "note": "bottom of richmond peak. Food but don't depend on it if possible.",
         "places": {
-            "Lodge": {
+            "Lodge and campground": {
 
             }
         }
     },
     "Seeley Lake": {
         "type": "all",
+        "note": "offroute. Just go to Ovando.",
         "coordinates": [47.1767076, -113.4824932]
     },
     "Ovando": {
         "coordinates": [47.020672,-113.1362027],
         "type": "limited",
-        "note": "Ship passport home?",
         "places": {
             "Ovando Inn": {
                 "phone": "406-793-5555",
@@ -228,6 +235,7 @@
     },
     "Basin": {
         "coordinates": [46.270756, -112.2654287],
+        "note": "From Helena, lot of uphill. Get on the Lava Trail. Lots of walking.",
         "type": "limited",
         "places": {
             "Silver Saddle": {
@@ -240,6 +248,7 @@
     "Butte": {
         "coordinates": [46.0126402, -112.5425501],
         "type": "all",
+        "note": "Have them go through my bike and safeway is across the street.",
         "places": {
             "Outdoorsman bike shop": {
                 "phone": "406-494-7700",
@@ -249,6 +258,7 @@
     },
     "Wise River": {
         "coordinates": [45.7920887,-112.9580925],
+        "note": "From Butte. Trail goes to bottom of flicer ridge between two patches of forest. Single track trail. DO NOT RIDE.",
         "type": "all",
         "places": {
             "Wise River Club": {
@@ -258,6 +268,10 @@
             "Wise River Mercantile": {
                 "address": "65013 Highway 43",
                 "phone": "406-832-3271"
+            },
+            "Firehouse": {
+                "address": "Past the left turn",
+                "note": "Pump for water if at night. Use tab."
             }
         }
     },
@@ -271,6 +285,7 @@
         }
     },
     "Polaris": {
+        "note": "Long climb from Wise river. All road. Tons of campgrounds with water.",
         "coordinates": [45.3698506, -113.1202305],
         "type": "limited",
         "places": {
@@ -280,6 +295,7 @@
         "note": "Next is Bannack, can be muddy"
     },
     "Lima": {
+        "note": "From pave road to lima, no service. Nothing. Go fast if rain is coming. Can be super muddy. If getting to road and really bad shape, make left along highway, 0.5 mile there is a store at Cabins.",
         "coordinates": [44.6382646, -112.6000192],
         "type": "limited",
         "places": {
@@ -291,6 +307,7 @@
         }
     },
     "Sawtelle Mountain Resort": {
+        "note": "Hard riding from Lima. RV park with candy before as well.",
         "coordinates": [44.5245687, -111.3290009],
         "type": "limited",
         "places": {
@@ -309,15 +326,19 @@
     "Warm River": {
         "type": "limited",
         "coordinates": [44.1151571, -111.3202324],
+        "note": "Pack for flag ranch",
         "places": {
             "Three rivers ranch": {
                 "hours": "7:30am-9pm"
+            },
+            "Gas station and market": {
             }
         }
     },
     "Squirrel Creek Elk Ranch": {
         "coordinates": [44.0561618, -111.2299307],
         "type": "limited",
+        "note": "There is water outside",
         "places": {
             "Restaurant": {
                 "phone": "208-652-3972"
@@ -327,7 +348,8 @@
     },
     "Flagg Ranch Resort": {
         "coordinates": [44.1063183, -110.667603],
-        "type": "limited"
+        "type": "limited",
+        "note": "Store with batteries. Tons of food."
     },
     "Moran": {
         "coordinates": [43.8484705,-110.4205117],
@@ -372,12 +394,14 @@
         }
     },
     "Pinedale": {
+        "note": "Alternate on a super steep hab north of pinedale.",
         "coordinates": [42.8654991, -109.8794768],
         "type": "all"
     },
     "Boulder": {
         "coordinates": [42.7501596, -109.7203293],
         "type": "limited",
+        "note": "Last chance to get food for the Basin.",
         "places": {
             "Boulder Store": {
                 "address": "8782 US-191",
@@ -387,12 +411,14 @@
         }
     },
     "South Pass City": {
+        "note": "Before, on the highway there is a rest area, I can fill up for Basin. Clean myself up.",
         "coordinates": [42.468710, -108.802780],
         "type": "water only"
     },
     "Atlantic City": {
         "coordinates": [42.4876787, -108.7866574],
         "type": "limited",
+        "note": "Don't rely on it. Can sleep in Tipi in from of the bar.",
         "places": {
             "Miner's Delight Inn Bed & Breakfast": {
 
@@ -406,7 +432,8 @@
     },
     "Diagnus Well": {
         "coordinates": [42.3092872, -108.4796054],
-        "type": "water only"
+        "type": "water only",
+        "note": "there is also a reservoir off route."
     },
     "Solar Well": {
         "coordinates": [41.9249873, -107.9995054],
@@ -429,10 +456,12 @@
         }
     },
     "Brush Mountain Lodge": {
+        "note": "From basin, on a paved road and turn left to Lodge. Right before, Post office, may be able to ask for water. Climb.",
         "coordinates": [40.853690, -107.289560],
         "type": "limited"
     },
     "Clark": {
+        "note": "Careful on descent after lodge",
         "coordinates": [40.7054108, -106.9280318],
         "type": "limited",
         "places": {
@@ -674,6 +703,7 @@
     "Silver City": {
         "coordinates": [32.7774125, -108.2761297],
         "type": "all",
+        "note": "24/7 gas station are in town not later. Pack for the end. Now give 100%. All flat from there, more weight is ok.",
         "places": {
             "The Gila Hike and Bike": {
                 "hours": "M-F 9-5:30, Sat 9-5, Sun 9-4",
@@ -693,6 +723,7 @@
     "Hachita": {
         "coordinates": [31.9181493, -108.3290973],
         "type": "limited",
+        "note": "Do not rely on this place.",
         "places": {
             "Hachita Cafe & Store": {},
             "Hachita Food Mart": {

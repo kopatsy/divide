@@ -11,7 +11,9 @@
 #import "JSONModel.h"
 
 #define METERS_TO_MILES 0.000621371192
-#define DISPLAYED_DISTANCE 200
+#define DISPLAYED_DISTANCE_AFTER 200
+#define DISPLAYED_DISTANCE_BEFORE 10
+#define MAX_DATA_POINTS 1000
 
 @protocol RoutePointColor
 @end
@@ -139,9 +141,10 @@ RouteInfo *_route;
     int idx = 0;
     int current_distance = 0;
     int current_total_elevation = 0;
+
     for (RoutePoint* item in _route.points) {
         CLLocation* location = [[CLLocation alloc] initWithLatitude:item.latitude longitude:item.longitude];
-        double distance =[location distanceFromLocation:self.currentLocation];
+        double distance = [location distanceFromLocation:self.currentLocation];
         if (distance_to_route == -1 || distance < distance_to_route) {
             closest = idx;
             distance_to_route = distance;
@@ -156,29 +159,40 @@ RouteInfo *_route;
     
     while (idx >= 0) {
         RoutePoint* point = [_route.points objectAtIndex:idx];
-        if (idx == 0 || point.distance <= current_distance - 10) {
+        if (idx == 0 || point.distance <= current_distance - DISPLAYED_DISTANCE_BEFORE) {
             break;
         }
+
         idx -= 1;
     }
     
     NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:1000];
+    int max_distance = -1;
     while (idx < [_route.points count]) {
-        if (((RoutePoint*)[_route.points objectAtIndex:idx]).distance - ((RoutePoint*)[_route.points objectAtIndex:closest]).distance > DISPLAYED_DISTANCE) {
+        RoutePoint* point = [_route.points objectAtIndex:idx];
+
+        if (point.distance - current_distance > DISPLAYED_DISTANCE_AFTER) {
             break;
         }
+
+        if ([data count] >= MAX_DATA_POINTS) {
+            break;
+        }
+
+
         [data addObject:[_route.points objectAtIndex:idx]];
         idx += 1;
+        max_distance = point.distance;
     }
-    
+
     NSMutableArray *pois = [[NSMutableArray alloc] initWithCapacity:10];
     for (RoutePOI* poi in _route.pois) {
-        if (poi.distance >= current_distance && poi.distance < current_distance + DISPLAYED_DISTANCE) {
+        if (poi.distance >= current_distance && poi.distance < max_distance) {
             NSString *offroute = @"";
             if (poi.offroute_distance) {
                 offroute = [NSString stringWithFormat:@"%.1f", poi.offroute_distance];
             }
-            
+
             [pois addObject:@{
                               @"name": poi.name,
                               @"distance": [NSNumber numberWithInt:poi.distance],

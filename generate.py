@@ -6,6 +6,8 @@ from jinja2 import FileSystemLoader, Environment
 from geopy.distance import distance
 from gpxpy import parser as gpxpy_parser
 
+M_TO_FT = 3.28084
+
 parser = argparse.ArgumentParser()
 parser.add_argument('gpx_filename', help='Path of the input GPX file.')
 parser.add_argument('--html', help='Generage the HTML page.', action='store_true', default=False)
@@ -48,7 +50,7 @@ for track in gpx_parser.gpx.tracks:
                 'latitude': point.latitude,
                 'longitude': point.longitude,
                 'grade': 0.0,
-                'elevation': int(point.elevation * 3.28084)
+                'elevation': int(point.elevation * M_TO_FT),
             }
 
             if last_point is not None:
@@ -68,17 +70,18 @@ for track in gpx_parser.gpx.tracks:
             }
 
             point_info['distance'] = total_distance
-            point_info['total_elevation'] = total_elevation
+            point_info['total_elevation'] = int(total_elevation * M_TO_FT)
 
             for poi, poi_info in SERVICES.items():
                 (dist_to_route, dist_from_start, _) = poi_info.get('location', (sys.maxint, -1, -1))
                 dist_to_point = distance((point.latitude, point.longitude), poi_info['coordinates'])
                 if dist_to_point < dist_to_route:
-                    poi_info['location'] = (dist_to_point, total_distance, total_elevation)
+                    poi_info['location'] = (dist_to_point, total_distance, point_info['total_elevation'])
 
             last_point = point
 
             points.append(point_info)
+print total_elevation * M_TO_FT, 'ft'
 
 for poi, poi_info in SERVICES.items():
     poi_info['offroute'] = False
