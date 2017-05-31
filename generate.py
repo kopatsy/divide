@@ -37,7 +37,7 @@ GRADES = [
 #   "distance": "Distance from start",
 #   "total_elevation": "Elevation from start",
 #   "elevation": "Elevation of that point in feet",
-#   "grade": "Grade from last point",   
+#   "grade": "Grade from last point",
 # }
 points = []
 last_point = None
@@ -148,15 +148,16 @@ if args.html:
         output.write(render_from_template('.', 'template.js', graphs=graphs))
 elif args.cues:
     last_distance = None
+    last_elevation = None
     for poi, poi_info in sorted_pois:
         if poi_info['offroute']:
             continue
-        distance = poi_info['location'][1]
+        _, distance, elevation = poi_info['location']
         if last_distance is not None:
-            print int(distance - last_distance)
+            print int(distance - last_distance), 'miles', int((elevation - last_elevation) * 3.28084), 'ft'
         else:
             print
-        last_distance = distance
+        last_distance, last_elevation = distance, elevation
         print int(distance), poi,
     print
 else:
@@ -175,14 +176,14 @@ else:
         for name, place in poi_info.get('places', {}).items():
             place['name'] = name
             places.append(place)
-        poi_info['places'] = places 
+        poi_info['places'] = places
         pois.append(poi_info)
 
     payload = {
         'points': points,
         'pois': pois
     }
-    
+
     with open('www/course.json', 'w') as output:
         json.dump(payload, output)
 
