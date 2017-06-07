@@ -64,7 +64,7 @@
     },
     "Fernie": {
         "coordinates": [49.5119505, -115.0625977],
-        "service": "all",
+        "type": "all",
         "places": {
             "Fernie Pizza and Pasta": {
                 "hours": "11am-11:30pm"
@@ -78,7 +78,7 @@
     "Butts Cabin": {
         "coordinates": [49.1194225, -114.508798],
         "service": "nothing",
-        "note": "It is not the first cabin. Cabin is on the right hand side.",
+        "note": "It is not the first cabin. Cabin is on the right hand side. Not on road in 2017.",
         "type": "nothing"
     },
     "Rooseville": {
